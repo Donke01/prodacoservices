@@ -1,0 +1,13 @@
+{
+  "name": "prodaco-website",
+  "version": "1.0.0",
+  "description": "Prodaco Services — animal nutrition & dairy farm services website.",
+  "private": true,
+  "main": "server.js",
+  "engines": { "node": ">=22.5" },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "rebuild": "node scripts/rebuild.mjs"
+  }
+}

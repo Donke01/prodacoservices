@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cow Comfort — Shade & Housing Designs | Prodaco Services</title>
+<meta name="description" content="Professional cow shade and housing designs in Kenya. Comfortable cows produce more milk — get a design built for your herd, your plot, and your budget.">
+<style>
+:root {
+  --green-900: #14351f;
+  --green-800: #1e5631;
+  --green-700: #2d6a4f;
+  --green-100: #e7f0e9;
+  --gold: #d4a017;
+  --gold-dark: #b8890f;
+  --cream: #faf7f0;
+  --ink: #24312a;
+  --ink-soft: #52605a;
+  --line: #dfe6e1;
+  --radius: 12px;
+  --shadow: 0 2px 12px rgba(20, 53, 31, 0.08);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.65;
+  font-size: 17px;
+}
+img { max-width: 100%; display: block; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.skip-link { position: absolute; left: -9999px; }
+.skip-link:focus { left: 10px; top: 10px; background: #fff; padding: 8px 14px; z-index: 100; }
+
+/* Header */
+.site-header {
+  background: var(--green-900);
+  position: sticky; top: 0; z-index: 50;
+  box-shadow: 0 1px 8px rgba(0,0,0,.25);
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding-top: 10px; padding-bottom: 10px; gap: 16px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; }
+.brand-mark { width: 38px; height: 38px; color: var(--gold); }
+.brand-text { font-weight: 800; font-size: 1.25rem; letter-spacing: .5px; line-height: 1.1; }
+.brand-sub { display: block; font-weight: 500; font-size: .7rem; letter-spacing: 3px; text-transform: uppercase; color: #cfe0d4; }
+.site-nav ul { display: flex; gap: 2px; list-style: none; flex-wrap: wrap; }
+.site-nav a {
+  color: #e8efe9; text-decoration: none; font-size: .92rem; font-weight: 600;
+  padding: 8px 12px; border-radius: 8px; display: block;
+}
+.site-nav a:hover { background: rgba(255,255,255,.12); color: #fff; }
+.site-nav a.active { background: var(--gold); color: var(--green-900); }
+.nav-toggle { display: none; background: none; border: 0; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 24px; height: 3px; background: #fff; margin: 5px 0; border-radius: 2px; }
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--green-900) 0%, var(--green-800) 55%, var(--green-700) 100%);
+  color: #fff; padding: 84px 0 90px; position: relative; overflow: hidden;
+}
+.hero::after {
+  content: ""; position: absolute; right: -120px; bottom: -140px; width: 480px; height: 480px;
+  background: radial-gradient(circle, rgba(212,160,23,.28), transparent 65%);
+}
+.hero-inner { max-width: 760px; position: relative; z-index: 1; }
+.hero .eyebrow { color: var(--gold); font-weight: 700; letter-spacing: 3px; text-transform: uppercase; font-size: .85rem; }
+.hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; margin: 14px 0 18px; font-weight: 800; }
+.hero p.lead { font-size: 1.2rem; color: #dce8de; max-width: 620px; }
+.hero-cta { margin-top: 30px; display: flex; gap: 14px; flex-wrap: wrap; }
+
+/* Page hero (interior pages) */
+.page-hero { background: linear-gradient(135deg, var(--green-900), var(--green-700)); color: #fff; padding: 52px 0; }
+.page-hero h1 { font-size: clamp(1.7rem, 4vw, 2.5rem); font-weight: 800; }
+.page-hero p { color: #d7e4da; max-width: 680px; margin-top: 10px; font-size: 1.1rem; }
+.page-hero .eyebrow { color: var(--gold); font-weight: 700; letter-spacing: 3px; text-transform: uppercase; font-size: .8rem; }
+
+/* Buttons */
+.btn { display: inline-block; padding: 13px 26px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: transform .15s, box-shadow .15s; }
+.btn:hover { transform: translateY(-2px); }
+.btn-gold { background: var(--gold); color: var(--green-900); }
+.btn-gold:hover { background: #e2b02a; box-shadow: 0 6px 18px rgba(212,160,23,.4); }
+.btn-outline { border: 2px solid rgba(255,255,255,.7); color: #fff; }
+.btn-outline:hover { background: rgba(255,255,255,.12); }
+.btn-green { background: var(--green-800); color: #fff; }
+.btn-green:hover { background: var(--green-700); }
+
+/* Sections */
+.section { padding: 64px 0; }
+.section.alt { background: #fff; }
+.section-head { max-width: 680px; margin-bottom: 38px; }
+.section-head .eyebrow { color: var(--gold-dark); font-weight: 700; letter-spacing: 3px; text-transform: uppercase; font-size: .8rem; }
+.section-head h2 { font-size: clamp(1.5rem, 3.5vw, 2.1rem); color: var(--green-900); margin-top: 8px; }
+.section-head p { color: var(--ink-soft); margin-top: 10px; }
+
+/* Cards */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; }
+.card {
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 26px; box-shadow: var(--shadow); display: flex; flex-direction: column;
+  transition: transform .15s, box-shadow .15s;
+}
+.card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(20,53,31,.12); }
+.card .icon { font-size: 1.6rem; width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; background: var(--green-100); border-radius: 12px; margin-bottom: 16px; }
+.card h3 { color: var(--green-900); font-size: 1.15rem; margin-bottom: 8px; }
+.card p { color: var(--ink-soft); font-size: .97rem; flex: 1; }
+.card a.card-link { margin-top: 14px; color: var(--green-800); font-weight: 700; text-decoration: none; font-size: .95rem; }
+.card a.card-link:hover { color: var(--gold-dark); }
+
+/* Stats */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 18px; text-align: center; }
+.stat { background: var(--green-900); color: #fff; padding: 28px 16px; border-radius: var(--radius); }
+.stat .num { font-size: 2rem; font-weight: 800; color: var(--gold); }
+.stat .label { font-size: .9rem; color: #cfe0d4; margin-top: 4px; }
+
+/* Article / prose */
+.prose { max-width: 760px; }
+.prose h2 { color: var(--green-900); margin: 36px 0 12px; font-size: 1.5rem; }
+.prose h3 { color: var(--green-800); margin: 26px 0 10px; font-size: 1.18rem; }
+.prose p { margin-bottom: 16px; }
+.prose ul, .prose ol { margin: 0 0 16px 24px; }
+.prose li { margin-bottom: 8px; }
+.prose table { border-collapse: collapse; width: 100%; margin: 18px 0; font-size: .95rem; background: #fff; }
+.prose th, .prose td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; }
+.prose th { background: var(--green-100); color: var(--green-900); }
+.prose blockquote { border-left: 4px solid var(--gold); background: #fff; padding: 14px 18px; margin: 18px 0; border-radius: 0 8px 8px 0; color: var(--ink-soft); }
+.callout { background: var(--green-100); border-left: 4px solid var(--green-700); border-radius: 0 10px 10px 0; padding: 16px 20px; margin: 20px 0; }
+.callout strong { color: var(--green-900); }
+.warn { background: #fdf3e3; border-left: 4px solid var(--gold); }
+
+/* Article meta */
+.article-meta { color: var(--ink-soft); font-size: .9rem; margin-bottom: 24px; }
+.tag { display: inline-block; background: var(--green-100); color: var(--green-800); font-size: .78rem; font-weight: 700; padding: 3px 12px; border-radius: 999px; margin-right: 6px; text-transform: uppercase; letter-spacing: 1px; }
+
+/* Two-column layout */
+.split { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: start; }
+@media (max-width: 800px) { .split { grid-template-columns: 1fr; } }
+
+/* CTA band */
+.cta-band { background: linear-gradient(120deg, var(--green-800), var(--green-700)); color: #fff; border-radius: 16px; padding: 44px 36px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+.cta-band h2 { font-size: 1.5rem; }
+.cta-band p { color: #d7e4da; margin-top: 6px; }
+
+/* Forms */
+.form-grid { display: grid; gap: 16px; max-width: 560px; }
+.form-grid label { font-weight: 700; color: var(--green-900); font-size: .92rem; }
+.form-grid input, .form-grid textarea, .form-grid select {
+  width: 100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px;
+  font-size: 1rem; font-family: inherit; background: #fff; margin-top: 6px;
+}
+.form-grid input:focus, .form-grid textarea:focus { outline: 2px solid var(--green-700); border-color: transparent; }
+
+/* Lists with checks */
+.check-list { list-style: none; margin: 16px 0 !important; }
+.check-list li { padding-left: 30px; position: relative; margin-bottom: 10px; }
+.check-list li::before { content: "✓"; position: absolute; left: 0; color: var(--gold-dark); font-weight: 800; }
+
+/* Footer */
+.site-footer { background: var(--green-900); color: #cfe0d4; margin-top: 60px; padding: 52px 0 0; }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; padding-bottom: 36px; }
+.site-footer h3 { color: #fff; font-size: 1rem; margin-bottom: 12px; letter-spacing: .5px; }
+.site-footer ul { list-style: none; }
+.site-footer li { margin-bottom: 8px; }
+.site-footer a { color: #cfe0d4; text-decoration: none; }
+.site-footer a:hover { color: var(--gold); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.15); padding: 18px 20px; font-size: .85rem; text-align: center; }
+
+/* Mobile nav */
+@media (max-width: 900px) {
+  .nav-toggle { display: block; }
+  .site-nav { display: none; width: 100%; }
+  .site-nav.open { display: block; }
+  .site-nav ul { flex-direction: column; padding-bottom: 12px; }
+  .hero { padding: 56px 0 64px; }
+}
+
+/* ===== Mobile polish ===== */
+@media (max-width: 620px) {
+  .section { padding: 44px 0; }
+  .hero { padding: 48px 0 56px; }
+  .hero-cta .btn, .cta-band .btn { display: block; width: 100%; text-align: center; }
+  .hero-cta { flex-direction: column; gap: 12px; max-width: 340px; }
+  .cta-band { padding: 32px 22px; text-align: center; justify-content: center; }
+  .cta-band > div { width: 100%; }
+  .cta-band .btn { margin-top: 6px; }
+  .page-hero { padding: 40px 0; }
+  .card { padding: 22px; }
+  .footer-grid { gap: 24px; }
+  body { font-size: 16.5px; }
+}
+
+/* Floating call button — mobile only */
+.call-fab {
+  display: none;
+  position: fixed; right: 18px; bottom: 18px; z-index: 60;
+  width: 58px; height: 58px; border-radius: 50%;
+  background: var(--gold); color: var(--green-900);
+  font-size: 1.5rem; text-decoration: none;
+  align-items: center; justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,.3);
+}
+@media (max-width: 900px) { .call-fab { display: flex; } }
+
+/* Larger comfortable tap targets */
+@media (max-width: 900px) {
+  .site-nav a { padding: 13px 14px; font-size: 1rem; }
+  .card a.card-link { padding: 6px 0; display: inline-block; }
+}
+
+/* Desktop: a touch more breathing room on very wide screens */
+@media (min-width: 1400px) {
+  .container { max-width: 1180px; }
+  .hero { padding: 100px 0 108px; }
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand" aria-label="Prodaco Services home">
+      <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><path fill="currentColor" d="M8 14c-3 0-5-2-5-5h4c0 1 .5 1.5 1.5 1.5H12l3-3h18l3 3h3.5c1 0 1.5-.5 1.5-1.5h4c0 3-2 5-5 5h-2l1 8c0 2-1 4-3 5l1 12c0 2-1.5 3.5-3.5 3.5S30 41 30 39l-1-9h-4v9c0 2-1.5 3.5-3.5 3.5S18 41 18 39l1-12c-2-1-3-3-3-5l1-8H8zm12-2a2 2 0 100 4 2 2 0 000-4zm8 0a2 2 0 100 4 2 2 0 000-4z"/></svg>
+      <span class="brand-text">PRODACO<span class="brand-sub">Services</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.site-nav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="training.html">Training</a></li>
+        <li><a href="consultancy.html">Consultancy</a></li>
+        <li><a href="nutrition.html">Cow Nutrition</a></li>
+        <li><a href="comfort.html" class="active">Cow Comfort</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Services &middot; Cow Comfort</p>
+    <h1>Cow Comfort</h1>
+    <p>A comfortable cow eats more, rests more, stresses less — and pays you back in milk. We design cow shades and housing that work for your herd, your plot, and your budget.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <div class="prose">
+      <h2>Cow shade designs</h2>
+      <p>Poor housing quietly costs farmers milk every single day — heat stress, wet floors, injuries, and udder infections all trace back to how and where your cows live. Good design prevents all of it, and it doesn't have to be expensive.</p>
+      <p>Our design service gives you:</p>
+      <ul class="check-list">
+        <li><strong>A site assessment</strong> — we visit your farm and design around your actual plot, herd size, and plans for growth.</li>
+        <li><strong>A complete design</strong> — layout, dimensions, materials, and orientation done right for ventilation, drainage, and cow flow.</li>
+        <li><strong>A build you can afford</strong> — designs matched to your budget, using materials available in your area.</li>
+        <li><strong>Room to grow</strong> — designed so you can expand as your herd grows, without demolishing and starting again.</li>
+      </ul>
+      <div class="callout">
+        <strong>Building or upgrading soon?</strong> Talk to us before you pour concrete. Fixing a design on paper costs nothing; fixing a built structure costs a fortune.
+      </div>
+    </div>
+    <div>
+      <div class="card">
+        <h3>Good design pays in</h3>
+        <ul style="list-style:none; margin-top:8px; color:var(--ink-soft);">
+          <li style="margin-bottom:10px">🥛 <strong style="color:var(--green-900)">More milk</strong> — comfortable, cool cows produce more</li>
+          <li style="margin-bottom:10px">🩺 <strong style="color:var(--green-900)">Fewer health problems</strong> — dry floors and clean resting areas</li>
+          <li style="margin-bottom:10px">⏱️ <strong style="color:var(--green-900)">Easier daily work</strong> — good layout saves hours of labour</li>
+          <li style="margin-bottom:10px">💰 <strong style="color:var(--green-900)">Lower building cost</strong> — right-sized, no expensive mistakes</li>
+        </ul>
+        <a class="card-link" href="contact.html" style="margin-top:12px">Request a design visit &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <h2>Get a shade design for your farm</h2>
+        <p>Call +254 716 767371 to arrange a site visit and quote.</p>
+      </div>
+      <a href="contact.html" class="btn btn-gold">Request a Design</a>
+    </div>
+  </div>
+</section>
+</main>
+<a class="call-fab" href="tel:+254716767371" aria-label="Call Prodaco Services">📞</a>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>Prodaco Services</h3>
+      <p>Animal nutrition, farm training, and dairy management services for farmers across Kenya and East Africa.</p>
+    </div>
+    <div>
+      <h3>Services</h3>
+      <ul>
+        <li><a href="training.html">Training</a></li>
+        <li><a href="consultancy.html">Consultancy</a></li>
+        <li><a href="nutrition.html">Cow Nutrition</a></li>
+        <li><a href="comfort.html">Cow Comfort</a></li>
+        <li><a href="activities.html">On-Farm Services</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Company</h3>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact &amp; Quotes</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Talk to us</h3>
+      <p><a href="tel:+254716767371">+254 716 767371</a><br>
+      <a href="tel:+25423591958">+254 235 91958</a><br>
+      <a href="mailto:info@prodacoservices.com">info@prodacoservices.com</a><br>Kenya</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; 2026 Prodaco Services. Feed better. Manage better. Produce more.</p>
+  </div>
+</footer>
+</body>
+</html>
