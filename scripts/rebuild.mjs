@@ -2,12 +2,21 @@
 // Merucow-inspired template. Idempotent.
 import fs from "node:fs";
 import path from "node:path";
+import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 const OUT = path.join(ROOT, "public");
 const BASE_URL = "https://prodacoservices.com";
+
+// Cache-buster: short content hash so CSS/JS updates bypass Cloudflare + browser cache.
+const hashFile = (p) => {
+  try { return crypto.createHash("md5").update(fs.readFileSync(p)).digest("hex").slice(0, 8); }
+  catch { return String(Date.now()); }
+};
+const V_CSS = hashFile(path.join(OUT, "styles.css"));
+const V_JS  = hashFile(path.join(OUT, "site.js"));
 
 const PHONE_PRIMARY   = "+254716767371";
 const PHONE_SECONDARY = "+254235919580";
@@ -189,14 +198,14 @@ function pageHead(p) {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/styles.css?v=${V_CSS}">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 `;
 }
 
-const pageTail = () => `${fabs}\n${footer}\n<script src="/site.js" defer></script>\n</body>\n</html>\n`;
+const pageTail = () => `${fabs}\n${footer}\n<script src="/site.js?v=${V_JS}" defer></script>\n</body>\n</html>\n`;
 
 /* -------- page bodies -------- */
 
