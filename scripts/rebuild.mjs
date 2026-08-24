@@ -60,8 +60,8 @@ const PHOTO = {
 
 const PAGES = [
   { file: "index.html",       nav: "home",         custom: "home",
-    title: "Animal Nutrition & Farm Management Services",
-    desc: "Prodaco Services — professional animal nutrition, farm training, consultancy, quality feeds, and on-farm services for farmers in Kenya. Call +254 716 767371." },
+    title: "Cow Care & Farm Management Services",
+    desc: "Prodaco Services — professional cow care, farm training, consultancy, quality feeds and on-farm services for every cow, every farmer in Kenya. Call +254 716 767371." },
   { file: "training.html",    nav: "training",     title: "Farm Training",
     desc: "Farm visit, week-long management, month-long farm-assistant training, farmer field schools and training of trainers — practical farm training in Kenya." },
   { file: "consultancy.html", nav: "consultancy",  title: "Farm Consultancy",
@@ -73,7 +73,7 @@ const PAGES = [
   { file: "activities.html",  nav: "activities",   title: "On-Farm Services — Silage, Rations & Animal Health",
     desc: "Silage harvesting, ration formulation and animal health management — done professionally, on your farm." },
   { file: "blog.html",        nav: "blog",         custom: "blog",
-    title: "Blog — Practical Cattle Keeping Tips",
+    title: "Blog — Practical Cow Care Tips",
     desc: "Articles, guides and lessons from Prodaco Services on silage-making, calf rearing, cow comfort, feeding and farm management." },
   { file: "about.html",       nav: "about",        title: "About Prodaco Services",
     desc: "A Kenyan animal nutrition and farm services company with one measure of success: your farm producing more." },
@@ -230,9 +230,9 @@ function homeBody() {
   const svgRefresh = `<svg viewBox="0 0 24 24"><path d="M17.65 6.35A7.958 7.958 0 0 0 12 4a8 8 0 1 0 7.75 10h-2.08a6 6 0 0 1-11.32-3A6 6 0 0 1 12 6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>`;
   return `<section class="hero">
   <div class="container hero-inner">
-    <div class="hero-badge">${svgSpark} Your cattle care partner in Kenya</div>
+    <div class="hero-badge">${svgSpark} Your cow care partner in Kenya</div>
     <h1>Feed better. <span class="accent">Manage better.</span> Produce more.</h1>
-    <p class="lead">Prodaco Services helps farmers get more milk from every cow — through professional training, farm consultancy, quality feeds, and hands-on farm services. Your farm, run like a business.</p>
+    <p class="lead">Everything your cows need — feeds, comfort, health, and training for the people who care for them. One partner, from calf to milking cow, across Kenya.</p>
     <div class="hero-cta">
       <a href="tel:${PHONE_PRIMARY}" class="btn btn-gold">${svgCall} Call ${PHONE_PRIMARY.replace(/(\+\d{3})(\d{3})(\d{3})(\d{3})/,"$1 $2 $3$4")}</a>
       <a href="https://wa.me/${WA_NUMBER}" class="btn btn-wa">${svgChat} WhatsApp us</a>
@@ -268,7 +268,7 @@ function homeBody() {
   <div class="container">
     <div class="band-head">
       <span class="pill-badge">Our impact</span>
-      <h2>Helping farmers across Kenya produce more</h2>
+      <h2>Helping farmers across Kenya raise healthier, more productive cows</h2>
       <p>Practical training, quality feeds, and hands-on services — the work adds up.</p>
     </div>
     <div class="impact-card">
@@ -283,7 +283,7 @@ function homeBody() {
   <div class="container">
     <div class="section-head centered">
       <span class="pill-badge">Why Prodaco</span>
-      <h2>Built for farmers. Backed by results.</h2>
+      <h2>Built around your cows. Backed by results.</h2>
       <p>Everything you need to feed better, house better and manage better — from one team you can call any time.</p>
     </div>
     <div class="benefits">
@@ -299,7 +299,7 @@ function homeBody() {
   <div class="container">
     <div class="section-head centered">
       <span class="pill-badge">Our services</span>
-      <h2>Your complete cattle keeping partner</h2>
+      <h2>Your complete cow care partner</h2>
       <p>Five service lines, one goal: a healthier, more productive, more profitable herd.</p>
     </div>
 
@@ -386,7 +386,7 @@ function homeBody() {
   <div class="container">
     <div class="section-head centered">
       <span class="pill-badge">Getting started</span>
-      <h2>Three steps to a more productive farm</h2>
+      <h2>Three steps to healthier, more productive cows</h2>
     </div>
     <div class="steps">
       <div class="step"><div class="n">1</div><h3>Call or WhatsApp</h3><p>Tell us about your farm and what you want to improve — milk yield, feed costs, housing, or management.</p></div>
@@ -575,7 +575,7 @@ function blogBody() {
   return `<section class="page-hero">
   <div class="container">
     <span class="pill-badge" style="background:rgba(255,255,255,.12);color:#fff">Blog</span>
-    <h1 style="margin-top:14px">Practical tips for productive farms</h1>
+    <h1 style="margin-top:14px">Practical tips for happier, more productive cows</h1>
     <p>Articles, guides and lessons from our work with farmers across Kenya. Written for the shed, not the classroom.</p>
   </div>
 </section>
