@@ -221,9 +221,12 @@ function homeBody() {
   const svgChat = `<svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1s-.8.9-1 1.1c-.2.2-.4.2-.7.1-1.6-.7-3-1.6-4-3-.3-.5.3-.5.9-1.5.1-.2 0-.4 0-.5s-.7-1.7-1-2.3c-.3-.5-.5-.5-.7-.5H7.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 5 4.3 2.7 1.1 2.7.7 3.2.7.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.3-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5C8.3 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>`;
   const svgArrow = `<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>`;
   const svgSpark = `<svg viewBox="0 0 24 24"><path d="M12 2l2 6 6 2-6 2-2 6-2-6-6-2 6-2 2-6z"/></svg>`;
-  const svgSchool = `<svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.2v6L12 21l7-3.8v-6l2-1.1V17h2V9L12 3zm6.8 6L12 12.7 5.2 9 12 5.3 18.8 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>`;
-  const svgSilo = `<svg viewBox="0 0 24 24"><path d="M12 2L2 6v2h20V6L12 2zm-8 8v10h4V10H4zm6 0v10h4V10h-4zm6 0v10h4V10h-4z"/></svg>`;
-  const svgChart = `<svg viewBox="0 0 24 24"><path d="M3 3v18h18v-2H5V3H3zm4 12l4-4 4 4 6-6-1.4-1.4L15 12.2l-4-4-5.4 5.4L7 15z"/></svg>`;
+  // Training: instructor + apprentice (a person teaching another) — clearer than a graduation cap
+  const svgSchool = `<svg viewBox="0 0 24 24"><path d="M12 4a3 3 0 100 6 3 3 0 000-6zM6 20v-2c0-1.7 1.3-3 3-3h6c1.7 0 3 1.3 3 3v2H6zm14-7v-2h-3v2h3zm-1-4l2-2-1.4-1.4L17.6 7 19 8.4z"/></svg>`;
+  // Feeds: hay bale (rounded rectangle with horizontal strands)
+  const svgSilo = `<svg viewBox="0 0 24 24"><path d="M4 6h16c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V8c0-1.1.9-2 2-2zm-.5 4.5h17v-1h-17v1zm0 3h17v-1h-17v1zm0 3h17v-1h-17v1z"/></svg>`;
+  // Consultancy: clipboard with checkmark
+  const svgChart = `<svg viewBox="0 0 24 24"><path d="M9 2h6v2h3c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2h3V2zm2 2v2h2V4h-2zm-.5 13.5l5.5-5.5-1.4-1.4-4.1 4.1-1.6-1.6L7.5 14.5l3 3z"/></svg>`;
   const svgShield = `<svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4zm-2 16l-4-4 1.4-1.4L10 14.2l6.6-6.6L18 9l-8 8z"/></svg>`;
   const svgHands = `<svg viewBox="0 0 24 24"><path d="M12 12c2.2 0 4-1.8 4-4s-1.8-4-4-4-4 1.8-4 4 1.8 4 4 4zm0 2c-2.7 0-8 1.3-8 4v2h16v-2c0-2.7-5.3-4-8-4z"/></svg>`;
   const svgLeaf = `<svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.2 3.8 21.7l1.9.6c.7-1.9 1.5-3.5 2.4-4.9 2 .7 4.1.5 6-.7 4.4-2.6 6-9.2 5-13.7-.5-.1-1.1-.1-1.6-.1L17 8z"/></svg>`;
@@ -304,7 +307,7 @@ function homeBody() {
     </div>
 
     <div class="service-row">
-      <div class="service-media"><img src="${PHOTO.training}" alt="Farm training in Kenya"></div>
+      <div class="service-media"><img src="${PHOTO.training}" alt="Farm training in Kenya" width="1200" height="800" loading="lazy"></div>
       <div class="service-body">
         <span class="tag-sm">Training</span>
         <h3>Practical cow training that sticks</h3>
@@ -320,7 +323,7 @@ function homeBody() {
     </div>
 
     <div class="service-row reverse">
-      <div class="service-media"><img src="${PHOTO.consultancy}" alt="farm consultancy"></div>
+      <div class="service-media"><img src="${PHOTO.consultancy}" alt="farm consultancy" width="1200" height="800" loading="lazy"></div>
       <div class="service-body">
         <span class="tag-sm">Consultancy</span>
         <h3>Know where your farm stands — and where it can go</h3>
@@ -335,7 +338,7 @@ function homeBody() {
     </div>
 
     <div class="service-row">
-      <div class="service-media"><img src="${PHOTO.nutrition}" alt="Silage and cow feed"></div>
+      <div class="service-media"><img src="${PHOTO.nutrition}" alt="Silage and cow feed" width="1200" height="800" loading="lazy"></div>
       <div class="service-body">
         <span class="tag-sm">Cow Nutrition</span>
         <h3>Quality silage, hay &amp; concentrates — year-round</h3>
@@ -350,7 +353,7 @@ function homeBody() {
     </div>
 
     <div class="service-row reverse">
-      <div class="service-media"><img src="${PHOTO.comfort}" alt="Cow shade design"></div>
+      <div class="service-media"><img src="${PHOTO.comfort}" alt="Cow shade design" width="1200" height="800" loading="lazy"></div>
       <div class="service-body">
         <span class="tag-sm">Cow Comfort</span>
         <h3>Housing that pays for itself</h3>
@@ -365,7 +368,7 @@ function homeBody() {
     </div>
 
     <div class="service-row">
-      <div class="service-media"><img src="${PHOTO.activities}" alt="On-farm services"></div>
+      <div class="service-media"><img src="${PHOTO.activities}" alt="On-farm services" width="1200" height="800" loading="lazy"></div>
       <div class="service-body">
         <span class="tag-sm">On-Farm Services</span>
         <h3>Done properly, on your farm</h3>
