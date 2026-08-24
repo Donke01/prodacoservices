@@ -198,36 +198,88 @@ const pageTail = () => `${fabs}\n${footer}\n<script src="/site.js" defer></scrip
 /* -------- page bodies -------- */
 
 function homeBody() {
+  const svgCall = `<svg viewBox="0 0 24 24"><path d="M20 15.5c-1.2 0-2.5-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.5-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.3-.7.2-1-.4-1.1-.6-2.4-.6-3.6 0-.5-.5-1-1-1H4c-.5 0-1 .5-1 1 0 9.4 7.6 17 17 17 .5 0 1-.5 1-1v-3.4c0-.5-.5-1-1-1z"/></svg>`;
+  const svgChat = `<svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1s-.8.9-1 1.1c-.2.2-.4.2-.7.1-1.6-.7-3-1.6-4-3-.3-.5.3-.5.9-1.5.1-.2 0-.4 0-.5s-.7-1.7-1-2.3c-.3-.5-.5-.5-.7-.5H7.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 5 4.3 2.7 1.1 2.7.7 3.2.7.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.3-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5C8.3 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>`;
+  const svgArrow = `<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>`;
+  const svgSpark = `<svg viewBox="0 0 24 24"><path d="M12 2l2 6 6 2-6 2-2 6-2-6-6-2 6-2 2-6z"/></svg>`;
+  const svgSchool = `<svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.2v6L12 21l7-3.8v-6l2-1.1V17h2V9L12 3zm6.8 6L12 12.7 5.2 9 12 5.3 18.8 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>`;
+  const svgSilo = `<svg viewBox="0 0 24 24"><path d="M12 2L2 6v2h20V6L12 2zm-8 8v10h4V10H4zm6 0v10h4V10h-4zm6 0v10h4V10h-4z"/></svg>`;
+  const svgChart = `<svg viewBox="0 0 24 24"><path d="M3 3v18h18v-2H5V3H3zm4 12l4-4 4 4 6-6-1.4-1.4L15 12.2l-4-4-5.4 5.4L7 15z"/></svg>`;
+  const svgShield = `<svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4zm-2 16l-4-4 1.4-1.4L10 14.2l6.6-6.6L18 9l-8 8z"/></svg>`;
+  const svgHands = `<svg viewBox="0 0 24 24"><path d="M12 12c2.2 0 4-1.8 4-4s-1.8-4-4-4-4 1.8-4 4 1.8 4 4 4zm0 2c-2.7 0-8 1.3-8 4v2h16v-2c0-2.7-5.3-4-8-4z"/></svg>`;
+  const svgLeaf = `<svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.2 3.8 21.7l1.9.6c.7-1.9 1.5-3.5 2.4-4.9 2 .7 4.1.5 6-.7 4.4-2.6 6-9.2 5-13.7-.5-.1-1.1-.1-1.6-.1L17 8z"/></svg>`;
+  const svgRefresh = `<svg viewBox="0 0 24 24"><path d="M17.65 6.35A7.958 7.958 0 0 0 12 4a8 8 0 1 0 7.75 10h-2.08a6 6 0 0 1-11.32-3A6 6 0 0 1 12 6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>`;
   return `<section class="hero">
   <div class="container hero-inner">
-    <p class="eyebrow">Animal Nutrition · Kenya</p>
-    <h1>Feed better. Manage better. Produce more.</h1>
+    <div class="hero-badge">${svgSpark} Your dairy farm partner in Kenya</div>
+    <h1>Feed better. <span class="accent">Manage better.</span> Produce more.</h1>
     <p class="lead">Prodaco Services helps dairy farmers get more milk from every cow — through professional training, farm consultancy, quality feeds, and hands-on farm services. Your farm, run like a business.</p>
     <div class="hero-cta">
-      <a href="tel:${PHONE_PRIMARY}" class="btn btn-gold">📞 Call ${PHONE_PRIMARY.replace(/(\+\d{3})(\d{3})(\d{3})(\d{3})/,"$1 $2 $3$4")}</a>
-      <a href="https://wa.me/${WA_NUMBER}" class="btn btn-wa">💬 WhatsApp us</a>
-      <a href="contact.html" class="btn btn-outline">Request a Quote</a>
+      <a href="tel:${PHONE_PRIMARY}" class="btn btn-gold">${svgCall} Call ${PHONE_PRIMARY.replace(/(\+\d{3})(\d{3})(\d{3})(\d{3})/,"$1 $2 $3$4")}</a>
+      <a href="https://wa.me/${WA_NUMBER}" class="btn btn-wa">${svgChat} WhatsApp us</a>
+      <a href="contact.html" class="btn btn-outline">Request a quote</a>
     </div>
   </div>
 </section>
 
+<div class="tiles-band">
+  <div class="container tiles-grid">
+    <div class="tile">
+      <div class="tile-icon">${svgSchool}</div>
+      <h3>Training</h3>
+      <p>From 1-day farm visits to full month-long farm-assistant programs. Practical, hands-on, on real farms.</p>
+      <a href="training.html" class="btn-outline-dark">See training →</a>
+    </div>
+    <div class="tile">
+      <div class="tile-icon">${svgSilo}</div>
+      <h3>Quality Feeds</h3>
+      <p>Silage, hay and dairymeal supplied year-round so production doesn't drop when the dry season hits.</p>
+      <a href="nutrition.html" class="btn-outline-dark">Our products →</a>
+    </div>
+    <div class="tile">
+      <div class="tile-icon">${svgChart}</div>
+      <h3>Consultancy</h3>
+      <p>Farm benchmarking and organisation. Know where your farm stands and get a clear plan to run it better.</p>
+      <a href="consultancy.html" class="btn-outline-dark">Get advice →</a>
+    </div>
+  </div>
+</div>
+
 <section class="impact-band">
   <div class="container">
     <div class="band-head">
-      <p class="eyebrow">Our impact</p>
+      <span class="pill-badge">Our impact</span>
       <h2>Helping dairy farmers across Kenya produce more</h2>
       <p>Practical training, quality feeds, and hands-on services — the work adds up.</p>
     </div>
-    <div class="impact-grid">
-      ${IMPACT.map(s => `<div><div class="num${s.word?' word':''}">${s.n}</div><div class="lbl">${s.l}</div></div>`).join("")}
+    <div class="impact-card">
+      <div class="impact-grid">
+        ${IMPACT.map(s => `<div><div class="num${s.word?' word':''}">${s.n}</div><div class="lbl">${s.l}</div></div>`).join("")}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <div class="section-head centered">
+      <span class="pill-badge">Why Prodaco</span>
+      <h2>Built for farmers. Backed by results.</h2>
+      <p>Everything you need to feed better, house better and manage better — from one team you can call any time.</p>
+    </div>
+    <div class="benefits">
+      <div class="benefit"><div class="b-ico">${svgShield}</div><h4>Practical, not theoretical</h4><p>Every service happens on real farms with real cows. We train by doing and advise from experience.</p></div>
+      <div class="benefit"><div class="b-ico">${svgLeaf}</div><h4>Built for local conditions</h4><p>Feeds, rations, designs and advice built for Kenyan forages, climates and market prices.</p></div>
+      <div class="benefit"><div class="b-ico">${svgHands}</div><h4>One partner, whole farm</h4><p>Feeding, housing, health, management and energy — we cover the full picture so gains stick.</p></div>
+      <div class="benefit"><div class="b-ico">${svgRefresh}</div><h4>We follow up</h4><p>The job isn't finished when the invoice is paid. It's finished when the results show in the milk pail.</p></div>
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <div class="section-head">
-      <p class="eyebrow">Our services</p>
+    <div class="section-head centered">
+      <span class="pill-badge">Our services</span>
       <h2>Your complete dairy farming partner</h2>
       <p>Five service lines, one goal: a healthier, more productive, more profitable herd.</p>
     </div>
@@ -313,8 +365,8 @@ function homeBody() {
 
 <section class="section alt">
   <div class="container">
-    <div class="section-head">
-      <p class="eyebrow">Getting started</p>
+    <div class="section-head centered">
+      <span class="pill-badge">Getting started</span>
       <h2>Three steps to a more productive farm</h2>
     </div>
     <div class="steps">
@@ -335,22 +387,62 @@ function homeBody() {
       <a href="contact.html" class="btn btn-gold">Contact Us Today</a>
     </div>
   </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <div class="section-head centered">
+      <span class="pill-badge">Get in touch</span>
+      <h2>How to reach us</h2>
+      <p>Pick whichever works best for you — every channel goes to the same team.</p>
+    </div>
+    <div class="channel-grid">
+      <div class="channel">
+        <div class="ico">${svgCall}</div>
+        <h4>Call us</h4>
+        <p>Speak to our team for immediate advice or bookings.</p>
+        <div class="big">${PHONE_PRIMARY.replace(/(\+\d{3})(\d{3})(\d{3})(\d{3})/,"$1 $2 $3$4")}</div>
+        <a class="btn btn-gold" href="tel:${PHONE_PRIMARY}">Call now</a>
+      </div>
+      <div class="channel">
+        <div class="ico">${svgChat}</div>
+        <h4>WhatsApp</h4>
+        <p>Message us any time — attach farm photos if it helps.</p>
+        <div class="big">${PHONE_PRIMARY.replace(/(\+\d{3})(\d{3})(\d{3})(\d{3})/,"$1 $2 $3$4")}</div>
+        <a class="btn btn-wa" href="https://wa.me/${WA_NUMBER}">Chat on WhatsApp</a>
+      </div>
+      <div class="channel">
+        <div class="ico">${svgArrow}</div>
+        <h4>Email us</h4>
+        <p>Send documents, plans, or detailed questions.</p>
+        <div class="big" style="font-size:1rem;">${EMAIL}</div>
+        <a class="btn btn-green" href="mailto:${EMAIL}">Email now</a>
+      </div>
+      <div class="channel">
+        <div class="ico">${svgSchool}</div>
+        <h4>Request a farm visit</h4>
+        <p>Fill in the enquiry form — we'll come and assess your farm.</p>
+        <div class="big" style="font-size:1rem;">Fill the form</div>
+        <a class="btn btn-green" href="contact.html#enquiry">Open form</a>
+      </div>
+    </div>
+  </div>
 </section>`;
 }
 
 function contactBody() {
   return `<section class="page-hero">
   <div class="container">
-    <p class="eyebrow">Get in touch</p>
-    <h1>Contact Us</h1>
+    <span class="pill-badge" style="background:rgba(255,255,255,.12);color:#fff">Get in touch</span>
+    <h1 style="margin-top:14px">Contact Us</h1>
     <p>Quotes, bookings, and honest advice on what your farm needs. Reach us any way that suits you — we reply the same day.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <div class="section-head">
-      <p class="eyebrow">Get started</p>
+    <div class="section-head centered">
+      <span class="pill-badge">Get started</span>
       <h2>How to reach us</h2>
       <p>Pick whichever works best for you — every channel goes to the same team.</p>
     </div>
@@ -464,8 +556,8 @@ function blogBody() {
   ];
   return `<section class="page-hero">
   <div class="container">
-    <p class="eyebrow">Blog</p>
-    <h1>Practical tips for productive dairy farms</h1>
+    <span class="pill-badge" style="background:rgba(255,255,255,.12);color:#fff">Blog</span>
+    <h1 style="margin-top:14px">Practical tips for productive dairy farms</h1>
     <p>Articles, guides and lessons from our work with farmers across Kenya. Written for the shed, not the classroom.</p>
   </div>
 </section>
