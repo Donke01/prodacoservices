@@ -23,12 +23,11 @@ const SOCIAL = {
   tiktok:    "https://tiktok.com/",
 };
 
-// TODO(client): update these with real Prodaco numbers before launch.
 const IMPACT = [
-  { n: "500+",   l: "Farmers Trained" },
-  { n: "100+",   l: "Farms Advised" },
-  { n: "2,000 t", l: "Silage Supplied" },
-  { n: "10+",    l: "Counties Served" },
+  { n: "1,000+",      l: "Farmers Trained", word: false },
+  { n: "300+",        l: "Farms Advised",   word: false },
+  { n: "Growing",     l: "Silage Customer Base", word: true },
+  { n: "Countrywide", l: "&amp; Cross-Border",   word: true },
 ];
 
 // Reusable Unsplash photos (free CC0, hot-linked). Client can swap for real farm photos.
@@ -199,7 +198,7 @@ function homeBody() {
       <p>Practical training, quality feeds, and hands-on services — the work adds up.</p>
     </div>
     <div class="impact-grid">
-      ${IMPACT.map(s => `<div><div class="num">${s.n}</div><div class="lbl">${s.l}</div></div>`).join("")}
+      ${IMPACT.map(s => `<div><div class="num${s.word?' word':''}">${s.n}</div><div class="lbl">${s.l}</div></div>`).join("")}
     </div>
   </div>
 </section>
