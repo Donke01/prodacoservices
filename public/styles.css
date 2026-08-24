@@ -81,7 +81,7 @@ img { max-width: 100%; display: block; }
 
 /* Hero — Merucow-style: photo bg with teal overlay, LEFT-aligned content */
 .hero {
-  position: relative; color: #fff; padding: 120px 0 160px; overflow: hidden;
+  position: relative; color: #fff; padding: 110px 0 240px; overflow: hidden;
   background:
     linear-gradient(115deg, rgba(20,60,68,.94) 0%, rgba(28,87,99,.88) 55%, rgba(43,125,140,.72) 100%),
     url("https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=2000&q=80") center/cover no-repeat;
@@ -105,7 +105,8 @@ img { max-width: 100%; display: block; }
 .section-head.centered h2 { margin-top: 14px; }
 
 /* Floating service tiles overlapping hero bottom */
-.tiles-band { margin-top: -90px; padding-bottom: 20px; position: relative; z-index: 2; }
+.tiles-band { margin-top: -140px; padding-bottom: 20px; position: relative; z-index: 2; }
+@media (max-width: 620px) { .tiles-band { margin-top: -80px; } }
 .tiles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px; }
 .tile { background: #fff; border-radius: 18px; padding: 34px 28px; box-shadow: 0 12px 40px rgba(20,60,68,.14); text-align: center; display: flex; flex-direction: column; align-items: center; transition: transform .18s ease, box-shadow .18s ease; }
 .tile:hover { transform: translateY(-4px); box-shadow: 0 18px 48px rgba(20,60,68,.18); }
