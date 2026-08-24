@@ -40,17 +40,22 @@ const IMPACT = [
 ];
 
 // Reusable Unsplash photos (free CC0, hot-linked). Client can swap for real farm photos.
+// All photos strictly dairy-cow subjects. Verified 2026-08-24.
 const PHOTO = {
+  // Training: Holstein & Jersey cows in pasture at sunset (Sam Carter)
   training:    "https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1200&q=80",
-  consultancy: "https://images.unsplash.com/photo-1546445317-29f4545e9d53?auto=format&fit=crop&w=1200&q=80",
-  // 3rd row (Cow Nutrition): silage / hay bales — actual feed
-  nutrition:   "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80",
-  // 4th row (Cow Comfort): dairy barn / cow housing
-  comfort:     "https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=1200&q=80",
-  activities:  "https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1200&q=80",
-  blogSilage:  "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80",
-  blogCalf:    "https://images.unsplash.com/photo-1584949514490-73fc2b3f0e83?auto=format&fit=crop&w=1200&q=80",
-  blogShade:   "https://images.unsplash.com/photo-1520880867055-1e30d1cb001c?auto=format&fit=crop&w=1200&q=80",
+  // Consultancy: single dairy cow portrait — for close-up "know your farm" feel
+  consultancy: "https://images.unsplash.com/photo-1583364428520-fa6c5013c0c3?auto=format&fit=crop&w=1200&q=80",
+  // Cow Nutrition: cow actively eating hay — matches feeds/silage story
+  nutrition:   "https://images.unsplash.com/photo-1504868433093-25555d9c0796?auto=format&fit=crop&w=1200&q=80",
+  // Cow Comfort: herd of dairy cows inside a barn — perfect for shade/housing
+  comfort:     "https://images.unsplash.com/photo-1636998980792-63f27ddea4e3?auto=format&fit=crop&w=1200&q=80",
+  // On-Farm Services: herd of dairy cattle grazing — activity on the farm
+  activities:  "https://images.unsplash.com/photo-1504867980221-c62ae681b301?auto=format&fit=crop&w=1200&q=80",
+  // Blog thumbnails
+  blogSilage:  "https://images.unsplash.com/photo-1504867841338-3da010c6152c?auto=format&fit=crop&w=1200&q=80", // cattle eating grass
+  blogCalf:    "https://images.unsplash.com/photo-1504868531014-6f6787aa186f?auto=format&fit=crop&w=1200&q=80", // young cows / calves
+  blogShade:   "https://images.unsplash.com/photo-1636998980792-63f27ddea4e3?auto=format&fit=crop&w=1200&q=80", // cows in barn
 };
 
 const PAGES = [
