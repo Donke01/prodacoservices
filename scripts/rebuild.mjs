@@ -40,17 +40,17 @@ const IMPACT = [
 ];
 
 // Reusable Unsplash photos (free CC0, hot-linked). Client can swap for real farm photos.
-// All photos strictly dairy-cow subjects. Verified 2026-08-24.
+// All photos strictly cow subjects. Verified 2026-08-24.
 const PHOTO = {
   // Training: Holstein & Jersey cows in pasture at sunset (Sam Carter)
   training:    "https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1200&q=80",
-  // Consultancy: single dairy cow portrait — for close-up "know your farm" feel
+  // Consultancy: single cow portrait — for close-up "know your farm" feel
   consultancy: "https://images.unsplash.com/photo-1583364428520-fa6c5013c0c3?auto=format&fit=crop&w=1200&q=80",
   // Cow Nutrition: cow actively eating hay — matches feeds/silage story
   nutrition:   "https://images.unsplash.com/photo-1504868433093-25555d9c0796?auto=format&fit=crop&w=1200&q=80",
-  // Cow Comfort: herd of dairy cows inside a barn — perfect for shade/housing
+  // Cow Comfort: herd of cows inside a barn — perfect for shade/housing
   comfort:     "https://images.unsplash.com/photo-1636998980792-63f27ddea4e3?auto=format&fit=crop&w=1200&q=80",
-  // On-Farm Services: herd of dairy cattle grazing — activity on the farm
+  // On-Farm Services: herd of cattle grazing — activity on the farm
   activities:  "https://images.unsplash.com/photo-1504867980221-c62ae681b301?auto=format&fit=crop&w=1200&q=80",
   // Blog thumbnails
   blogSilage:  "https://images.unsplash.com/photo-1504867841338-3da010c6152c?auto=format&fit=crop&w=1200&q=80", // cattle eating grass
@@ -61,20 +61,20 @@ const PHOTO = {
 const PAGES = [
   { file: "index.html",       nav: "home",         custom: "home",
     title: "Animal Nutrition & Farm Management Services",
-    desc: "Prodaco Services — professional animal nutrition, farm training, consultancy, quality feeds, and on-farm services for dairy farmers in Kenya. Call +254 716 767371." },
-  { file: "training.html",    nav: "training",     title: "Dairy Farm Training",
-    desc: "Farm visit, week-long management, month-long farm-assistant training, farmer field schools and training of trainers — practical dairy farm training in Kenya." },
-  { file: "consultancy.html", nav: "consultancy",  title: "Dairy Farm Consultancy",
+    desc: "Prodaco Services — professional animal nutrition, farm training, consultancy, quality feeds, and on-farm services for cow farmers in Kenya. Call +254 716 767371." },
+  { file: "training.html",    nav: "training",     title: "Cow Farm Training",
+    desc: "Farm visit, week-long management, month-long farm-assistant training, farmer field schools and training of trainers — practical cow farm training in Kenya." },
+  { file: "consultancy.html", nav: "consultancy",  title: "Cow Farm Consultancy",
     desc: "Farm benchmarking and farm organisation consultancy — see where your farm stands and get a clear plan to run it better." },
-  { file: "nutrition.html",   nav: "nutrition",    title: "Cow Nutrition — Silage, Hay & Dairymeal",
-    desc: "Quality silage, hay and dairymeal for Kenyan dairy farms. Consistent milk production all year round." },
+  { file: "nutrition.html",   nav: "nutrition",    title: "Cow Nutrition — Silage, Hay & concentrates",
+    desc: "Quality silage, hay and concentrates for Kenyan cow farms. Consistent milk production all year round." },
   { file: "comfort.html",     nav: "comfort",      title: "Cow Comfort & Shade Design",
-    desc: "Professional cow shade designs for Kenyan dairy farms. Comfortable cows eat more, stress less, and give more milk." },
+    desc: "Professional cow shade designs for Kenyan cow farms. Comfortable cows eat more, stress less, and give more milk." },
   { file: "activities.html",  nav: "activities",   title: "On-Farm Services — Silage, Rations & Animal Health",
     desc: "Silage harvesting, ration formulation and animal health management — done professionally, on your farm." },
   { file: "blog.html",        nav: "blog",         custom: "blog",
-    title: "Blog — Practical Dairy Farming Tips",
-    desc: "Articles, guides and lessons from Prodaco Services on silage-making, calf rearing, cow comfort, feeding and dairy farm management." },
+    title: "Blog — Practical Cow Farming Tips",
+    desc: "Articles, guides and lessons from Prodaco Services on silage-making, calf rearing, cow comfort, feeding and cow farm management." },
   { file: "about.html",       nav: "about",        title: "About Prodaco Services",
     desc: "A Kenyan animal nutrition and farm services company with one measure of success: your farm producing more." },
   { file: "contact.html",     nav: "contact",      custom: "contact",
@@ -84,7 +84,7 @@ const PAGES = [
 
 /* -------- fragments -------- */
 
-const brandLogo = `<img class="brand-logo" src="/logo-header.png" alt="Prodaco Services — animal nutrition & dairy farm services" width="170" height="114">`;
+const brandLogo = `<img class="brand-logo" src="/logo-header.png" alt="Prodaco Services — animal nutrition & cow farm services" width="170" height="114">`;
 
 const contactStrip = `<div class="contact-strip">
   <div class="container">
@@ -141,7 +141,7 @@ const footer = `<footer class="site-footer">
   <div class="container footer-grid">
     <div>
       <h3>Prodaco Services</h3>
-      <p>Animal nutrition, farm training, and dairy management services for farmers across Kenya and East Africa.</p>
+      <p>Animal nutrition, farm training, and cow management services for farmers across Kenya and East Africa.</p>
       ${socialIcons}
     </div>
     <div>
@@ -230,9 +230,9 @@ function homeBody() {
   const svgRefresh = `<svg viewBox="0 0 24 24"><path d="M17.65 6.35A7.958 7.958 0 0 0 12 4a8 8 0 1 0 7.75 10h-2.08a6 6 0 0 1-11.32-3A6 6 0 0 1 12 6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>`;
   return `<section class="hero">
   <div class="container hero-inner">
-    <div class="hero-badge">${svgSpark} Your dairy farm partner in Kenya</div>
+    <div class="hero-badge">${svgSpark} Your cow care partner in Kenya</div>
     <h1>Feed better. <span class="accent">Manage better.</span> Produce more.</h1>
-    <p class="lead">Prodaco Services helps dairy farmers get more milk from every cow — through professional training, farm consultancy, quality feeds, and hands-on farm services. Your farm, run like a business.</p>
+    <p class="lead">Prodaco Services helps cow farmers get more milk from every cow — through professional training, farm consultancy, quality feeds, and hands-on farm services. Your farm, run like a business.</p>
     <div class="hero-cta">
       <a href="tel:${PHONE_PRIMARY}" class="btn btn-gold">${svgCall} Call ${PHONE_PRIMARY.replace(/(\+\d{3})(\d{3})(\d{3})(\d{3})/,"$1 $2 $3$4")}</a>
       <a href="https://wa.me/${WA_NUMBER}" class="btn btn-wa">${svgChat} WhatsApp us</a>
@@ -252,7 +252,7 @@ function homeBody() {
     <div class="tile">
       <div class="tile-icon">${svgSilo}</div>
       <h3>Quality Feeds</h3>
-      <p>Silage, hay and dairymeal supplied year-round so production doesn't drop when the dry season hits.</p>
+      <p>Silage, hay and concentrates supplied year-round so production doesn't drop when the dry season hits.</p>
       <a href="nutrition.html" class="btn-outline-dark">Our products →</a>
     </div>
     <div class="tile">
@@ -268,7 +268,7 @@ function homeBody() {
   <div class="container">
     <div class="band-head">
       <span class="pill-badge">Our impact</span>
-      <h2>Helping dairy farmers across Kenya produce more</h2>
+      <h2>Helping cow farmers across Kenya produce more</h2>
       <p>Practical training, quality feeds, and hands-on services — the work adds up.</p>
     </div>
     <div class="impact-card">
@@ -299,7 +299,7 @@ function homeBody() {
   <div class="container">
     <div class="section-head centered">
       <span class="pill-badge">Our services</span>
-      <h2>Your complete dairy farming partner</h2>
+      <h2>Your complete cow farming partner</h2>
       <p>Five service lines, one goal: a healthier, more productive, more profitable herd.</p>
     </div>
 
@@ -307,7 +307,7 @@ function homeBody() {
       <div class="service-media"><img src="${PHOTO.training}" alt="Farm training in Kenya"></div>
       <div class="service-body">
         <span class="tag-sm">Training</span>
-        <h3>Practical dairy training that sticks</h3>
+        <h3>Practical cow training that sticks</h3>
         <p>From 1-day farm visits to a full month of farm-assistant training — plus Farmer Field Schools and training of trainers for cooperatives and NGO programs.</p>
         <ul>
           <li><strong>1-day farm visits</strong> — diagnostic + practical recommendations</li>
@@ -320,7 +320,7 @@ function homeBody() {
     </div>
 
     <div class="service-row reverse">
-      <div class="service-media"><img src="${PHOTO.consultancy}" alt="Dairy farm consultancy"></div>
+      <div class="service-media"><img src="${PHOTO.consultancy}" alt="cow farm consultancy"></div>
       <div class="service-body">
         <span class="tag-sm">Consultancy</span>
         <h3>Know where your farm stands — and where it can go</h3>
@@ -335,15 +335,15 @@ function homeBody() {
     </div>
 
     <div class="service-row">
-      <div class="service-media"><img src="${PHOTO.nutrition}" alt="Silage and dairy feed"></div>
+      <div class="service-media"><img src="${PHOTO.nutrition}" alt="Silage and cow feed"></div>
       <div class="service-body">
         <span class="tag-sm">Cow Nutrition</span>
-        <h3>Quality silage, hay &amp; dairymeal — year-round</h3>
+        <h3>Quality silage, hay &amp; concentrates — year-round</h3>
         <p>Feeds you can trust, supplied consistently so production doesn't drop when the dry season hits.</p>
         <ul>
           <li>Maize and Boma Rhodes <strong>silage</strong></li>
           <li>Baled <strong>hay</strong> — Rhodes, Lucerne</li>
-          <li>Custom <strong>dairymeal</strong> mixes</li>
+          <li>Custom <strong>concentrates</strong> mixes</li>
         </ul>
         <a class="btn btn-green" href="nutrition.html">Our products</a>
       </div>
@@ -528,7 +528,7 @@ function contactBody() {
             <option>Training of trainers / Farmer Field School</option>
             <option>Consultancy — farm benchmarking</option>
             <option>Consultancy — farm organisation</option>
-            <option>Feeds — silage / hay / dairymeal</option>
+            <option>Feeds — silage / hay / concentrates</option>
             <option>Cow shade design</option>
             <option>Silage harvesting</option>
             <option>Ration formulation</option>
@@ -575,7 +575,7 @@ function blogBody() {
   return `<section class="page-hero">
   <div class="container">
     <span class="pill-badge" style="background:rgba(255,255,255,.12);color:#fff">Blog</span>
-    <h1 style="margin-top:14px">Practical tips for productive dairy farms</h1>
+    <h1 style="margin-top:14px">Practical tips for productive cow farms</h1>
     <p>Articles, guides and lessons from our work with farmers across Kenya. Written for the shed, not the classroom.</p>
   </div>
 </section>
