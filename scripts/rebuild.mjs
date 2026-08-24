@@ -39,18 +39,19 @@ const IMPACT = [
   { n: "Countrywide", l: "&amp; Cross-Border",   word: true },
 ];
 
-// Reusable Unsplash photos (free CC0, hot-linked). Client can swap for real farm photos.
-// All photos strictly cow subjects. Verified 2026-08-24.
+// Photos matched to each service description. Cattle photos only where the
+// service is about cattle (nutrition, comfort/shelter). Training and consultancy
+// use African-context farm photos of people. Verified 2026-08-24.
 const PHOTO = {
-  // Training: Holstein & Jersey cows in pasture at sunset (Sam Carter)
-  training:    "https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1200&q=80",
-  // Consultancy: single cow portrait — for close-up "know your farm" feel
+  // Training: African farmer carrying a bundle of fodder — practical, hands-on farm work
+  training:    "https://images.unsplash.com/photo-1741940365425-1b9a575d373e?auto=format&fit=crop&w=1200&q=80",
+  // Consultancy: single cow portrait — keep as on the live site
   consultancy: "https://images.unsplash.com/photo-1583364428520-fa6c5013c0c3?auto=format&fit=crop&w=1200&q=80",
-  // Cow Nutrition: cow actively eating hay — matches feeds/silage story
+  // Cow Nutrition: cows actively eating hay — matches feeds/silage
   nutrition:   "https://images.unsplash.com/photo-1504868433093-25555d9c0796?auto=format&fit=crop&w=1200&q=80",
-  // Cow Comfort: herd of cows inside a barn — perfect for shade/housing
+  // Cow Comfort / Shelter: cows inside a barn
   comfort:     "https://images.unsplash.com/photo-1636998980792-63f27ddea4e3?auto=format&fit=crop&w=1200&q=80",
-  // On-Farm Services: herd of cattle grazing — activity on the farm
+  // On-Farm Services: herd of cattle in the field — activity on the farm
   activities:  "https://images.unsplash.com/photo-1504867980221-c62ae681b301?auto=format&fit=crop&w=1200&q=80",
   // Blog thumbnails
   blogSilage:  "https://images.unsplash.com/photo-1504867841338-3da010c6152c?auto=format&fit=crop&w=1200&q=80", // cattle eating grass
@@ -307,7 +308,7 @@ function homeBody() {
     </div>
 
     <div class="service-row">
-      <div class="service-media"><img src="${PHOTO.training}" alt="Farm training in Kenya" width="1200" height="800" loading="lazy"></div>
+      <div class="service-media"><img src="${PHOTO.training}" alt="Farm worker carrying fodder during hands-on training" width="1200" height="800" loading="lazy"></div>
       <div class="service-body">
         <span class="tag-sm">Training</span>
         <h3>Practical cow training that sticks</h3>
@@ -323,7 +324,7 @@ function homeBody() {
     </div>
 
     <div class="service-row reverse">
-      <div class="service-media"><img src="${PHOTO.consultancy}" alt="farm consultancy" width="1200" height="800" loading="lazy"></div>
+      <div class="service-media"><img src="${PHOTO.consultancy}" alt="Close-up of cows on a farm" width="1200" height="800" loading="lazy"></div>
       <div class="service-body">
         <span class="tag-sm">Consultancy</span>
         <h3>Know where your farm stands — and where it can go</h3>
@@ -353,7 +354,7 @@ function homeBody() {
     </div>
 
     <div class="service-row reverse">
-      <div class="service-media"><img src="${PHOTO.comfort}" alt="Cow shade design" width="1200" height="800" loading="lazy"></div>
+      <div class="service-media"><img src="${PHOTO.comfort}" alt="Cows housed comfortably in a well-designed dairy shelter" width="1200" height="800" loading="lazy"></div>
       <div class="service-body">
         <span class="tag-sm">Cow Comfort</span>
         <h3>Housing that pays for itself</h3>
@@ -368,7 +369,7 @@ function homeBody() {
     </div>
 
     <div class="service-row">
-      <div class="service-media"><img src="${PHOTO.activities}" alt="On-farm services" width="1200" height="800" loading="lazy"></div>
+      <div class="service-media"><img src="${PHOTO.activities}" alt="Herd of cattle receiving on-farm services" width="1200" height="800" loading="lazy"></div>
       <div class="service-body">
         <span class="tag-sm">On-Farm Services</span>
         <h3>Done properly, on your farm</h3>
