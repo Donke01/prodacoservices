@@ -36,33 +36,46 @@ img { max-width: 100%; display: block; }
 .skip-link { position: absolute; left: -9999px; }
 .skip-link:focus { left: 10px; top: 10px; background: #fff; padding: 8px 14px; z-index: 100; }
 
-/* Contact strip — Merucow-style thin bar above the main header */
-.contact-strip { background: var(--green-900); color: #dbebee; font-size: .82rem; }
-.contact-strip .container { display: flex; justify-content: space-between; align-items: center; padding-top: 8px; padding-bottom: 8px; gap: 20px; flex-wrap: wrap; }
-.contact-strip .cs-left { display: flex; gap: 20px; flex-wrap: wrap; }
-.contact-strip .cs-left a, .contact-strip .cs-right a { color: #dbebee; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
-.contact-strip .cs-left a:hover, .contact-strip .cs-right a:hover { color: var(--gold); }
-.contact-strip .cs-right { display: flex; gap: 12px; }
-.contact-strip .cs-right svg { width: 15px; height: 15px; fill: currentColor; }
-@media (max-width: 620px) { .contact-strip { display: none; } }
+/* Contact strip — Merucow layout: socials LEFT (round buttons), contacts CENTER, CTA RIGHT */
+.contact-strip { background: var(--green-900); color: #eaf2f3; font-size: .87rem; }
+.contact-strip .container { display: flex; justify-content: space-between; align-items: center; padding-top: 12px; padding-bottom: 12px; gap: 20px; flex-wrap: wrap; }
+.cs-socials { display: flex; gap: 10px; align-items: center; }
+.cs-socials a { width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,.08); display: inline-flex; align-items: center; justify-content: center; color: #eaf2f3; text-decoration: none; transition: background .15s, color .15s; }
+.cs-socials a:hover { background: var(--gold); color: #fff; }
+.cs-socials svg { width: 15px; height: 15px; fill: currentColor; }
+.cs-contact { display: flex; gap: 34px; flex: 1; justify-content: center; flex-wrap: wrap; }
+.cs-contact a { color: #eaf2f3; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+.cs-contact a:hover { color: var(--gold); }
+.cs-contact svg { width: 15px; height: 15px; fill: var(--gold); flex-shrink: 0; }
+.cs-cta { display: inline-flex; align-items: center; gap: 8px; padding: 9px 18px; border-radius: 12px; background: var(--gold); color: #fff; font-weight: 700; text-decoration: none; font-size: .87rem; transition: background .15s, box-shadow .15s; }
+.cs-cta:hover { background: var(--gold-dark); box-shadow: 0 4px 14px rgba(90,155,71,.35); }
+.cs-cta svg { width: 15px; height: 15px; fill: currentColor; }
+@media (max-width: 900px) {
+  .cs-contact { display: none; }
+  .contact-strip .container { justify-content: space-between; }
+}
+@media (max-width: 500px) {
+  .cs-socials a:nth-child(n+4) { display: none; }
+}
 
-/* Header — clean white with the real logo */
+/* Header — clean white with the real logo, roomier like Merucow */
 .site-header {
   background: #fff;
   position: sticky; top: 0; z-index: 50;
   border-bottom: 1px solid var(--line);
   box-shadow: 0 1px 8px rgba(20,60,68,.05);
 }
-.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 8px 0; gap: 16px; flex-wrap: wrap; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 24px; flex-wrap: wrap; }
 .brand { display: flex; align-items: center; text-decoration: none; }
-.brand-logo { height: 54px; width: auto; display: block; }
-.site-nav ul { display: flex; gap: 2px; list-style: none; flex-wrap: wrap; }
+.brand-logo { height: 64px; width: auto; display: block; }
+.site-nav { flex: 1; display: flex; justify-content: flex-end; }
+.site-nav ul { display: flex; gap: 4px; list-style: none; flex-wrap: wrap; align-items: center; }
 .site-nav a {
-  color: var(--green-900); text-decoration: none; font-size: .92rem; font-weight: 600;
-  padding: 8px 12px; border-radius: 8px; display: block;
+  color: var(--green-900); text-decoration: none; font-size: .95rem; font-weight: 600;
+  padding: 10px 16px; border-radius: 10px; display: block; transition: background .12s, color .12s;
 }
 .site-nav a:hover { background: var(--green-100); color: var(--green-800); }
-.site-nav a.active { background: var(--green-800); color: #fff; }
+.site-nav a.active { background: var(--green-100); color: var(--green-800); font-weight: 700; }
 .nav-toggle { display: none; background: none; border: 0; cursor: pointer; padding: 8px; }
 .nav-toggle span { display: block; width: 24px; height: 3px; background: var(--green-900); margin: 5px 0; border-radius: 2px; }
 
