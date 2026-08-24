@@ -43,8 +43,10 @@ const IMPACT = [
 const PHOTO = {
   training:    "https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1200&q=80",
   consultancy: "https://images.unsplash.com/photo-1546445317-29f4545e9d53?auto=format&fit=crop&w=1200&q=80",
-  nutrition:   "https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?auto=format&fit=crop&w=1200&q=80",
-  comfort:     "https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?auto=format&fit=crop&w=1200&q=80",
+  // 3rd row (Cow Nutrition): silage / hay bales — actual feed
+  nutrition:   "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80",
+  // 4th row (Cow Comfort): dairy barn / cow housing
+  comfort:     "https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=1200&q=80",
   activities:  "https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1200&q=80",
   blogSilage:  "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80",
   blogCalf:    "https://images.unsplash.com/photo-1584949514490-73fc2b3f0e83?auto=format&fit=crop&w=1200&q=80",
@@ -63,8 +65,8 @@ const PAGES = [
     desc: "Quality silage, hay and dairymeal for Kenyan dairy farms. Consistent milk production all year round." },
   { file: "comfort.html",     nav: "comfort",      title: "Cow Comfort & Shade Design",
     desc: "Professional cow shade designs for Kenyan dairy farms. Comfortable cows eat more, stress less, and give more milk." },
-  { file: "activities.html",  nav: "activities",   title: "On-Farm Services — Silage, Rations, Biogas, Health",
-    desc: "Silage harvesting, ration formulation, biogas and animal health management — done professionally, on your farm." },
+  { file: "activities.html",  nav: "activities",   title: "On-Farm Services — Silage, Rations & Animal Health",
+    desc: "Silage harvesting, ration formulation and animal health management — done professionally, on your farm." },
   { file: "blog.html",        nav: "blog",         custom: "blog",
     title: "Blog — Practical Dairy Farming Tips",
     desc: "Articles, guides and lessons from Prodaco Services on silage-making, calf rearing, cow comfort, feeding and dairy farm management." },
@@ -362,12 +364,12 @@ function homeBody() {
       <div class="service-body">
         <span class="tag-sm">On-Farm Services</span>
         <h3>Done properly, on your farm</h3>
-        <p>Silage harvesting, ration formulation, biogas installation and animal health management — with equipment, expertise, and follow-up.</p>
+        <p>Silage harvesting, ration formulation and animal health management — with equipment, expertise, and follow-up.</p>
         <ul>
           <li><strong>Silage harvesting</strong> — chop, pack, seal</li>
           <li><strong>Ration formulation</strong> from your local ingredients</li>
-          <li><strong>Biogas</strong> for cooking &amp; lighting from cow waste</li>
-          <li><strong>Animal health</strong> management protocols</li>
+          <li><strong>Animal health</strong> management protocols and vaccinations</li>
+          <li><strong>Milk hygiene</strong> and quality management support</li>
         </ul>
         <a class="btn btn-green" href="activities.html">Farm services</a>
       </div>
@@ -525,7 +527,6 @@ function contactBody() {
             <option>Cow shade design</option>
             <option>Silage harvesting</option>
             <option>Ration formulation</option>
-            <option>Biogas</option>
             <option>Animal health management</option>
             <option>Not sure — advise me</option>
           </select>
