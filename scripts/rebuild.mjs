@@ -61,20 +61,20 @@ const PHOTO = {
 const PAGES = [
   { file: "index.html",       nav: "home",         custom: "home",
     title: "Animal Nutrition & Farm Management Services",
-    desc: "Prodaco Services — professional animal nutrition, farm training, consultancy, quality feeds, and on-farm services for cow farmers in Kenya. Call +254 716 767371." },
-  { file: "training.html",    nav: "training",     title: "Cow Farm Training",
-    desc: "Farm visit, week-long management, month-long farm-assistant training, farmer field schools and training of trainers — practical cow farm training in Kenya." },
-  { file: "consultancy.html", nav: "consultancy",  title: "Cow Farm Consultancy",
+    desc: "Prodaco Services — professional animal nutrition, farm training, consultancy, quality feeds, and on-farm services for farmers in Kenya. Call +254 716 767371." },
+  { file: "training.html",    nav: "training",     title: "Farm Training",
+    desc: "Farm visit, week-long management, month-long farm-assistant training, farmer field schools and training of trainers — practical farm training in Kenya." },
+  { file: "consultancy.html", nav: "consultancy",  title: "Farm Consultancy",
     desc: "Farm benchmarking and farm organisation consultancy — see where your farm stands and get a clear plan to run it better." },
   { file: "nutrition.html",   nav: "nutrition",    title: "Cow Nutrition — Silage, Hay & concentrates",
-    desc: "Quality silage, hay and concentrates for Kenyan cow farms. Consistent milk production all year round." },
+    desc: "Quality silage, hay and concentrates for Kenyan farms. Consistent milk production all year round." },
   { file: "comfort.html",     nav: "comfort",      title: "Cow Comfort & Shade Design",
-    desc: "Professional cow shade designs for Kenyan cow farms. Comfortable cows eat more, stress less, and give more milk." },
+    desc: "Professional cow shade designs for Kenyan farms. Comfortable cows eat more, stress less, and give more milk." },
   { file: "activities.html",  nav: "activities",   title: "On-Farm Services — Silage, Rations & Animal Health",
     desc: "Silage harvesting, ration formulation and animal health management — done professionally, on your farm." },
   { file: "blog.html",        nav: "blog",         custom: "blog",
-    title: "Blog — Practical Cow Farming Tips",
-    desc: "Articles, guides and lessons from Prodaco Services on silage-making, calf rearing, cow comfort, feeding and cow farm management." },
+    title: "Blog — Practical Cattle Keeping Tips",
+    desc: "Articles, guides and lessons from Prodaco Services on silage-making, calf rearing, cow comfort, feeding and farm management." },
   { file: "about.html",       nav: "about",        title: "About Prodaco Services",
     desc: "A Kenyan animal nutrition and farm services company with one measure of success: your farm producing more." },
   { file: "contact.html",     nav: "contact",      custom: "contact",
@@ -84,7 +84,7 @@ const PAGES = [
 
 /* -------- fragments -------- */
 
-const brandLogo = `<img class="brand-logo" src="/logo-header.png" alt="Prodaco Services — animal nutrition & cow farm services" width="170" height="114">`;
+const brandLogo = `<img class="brand-logo" src="/logo-header.png" alt="Prodaco Services — animal nutrition & farm services" width="170" height="114">`;
 
 const contactStrip = `<div class="contact-strip">
   <div class="container">
@@ -141,7 +141,7 @@ const footer = `<footer class="site-footer">
   <div class="container footer-grid">
     <div>
       <h3>Prodaco Services</h3>
-      <p>Animal nutrition, farm training, and cow management services for farmers across Kenya and East Africa.</p>
+      <p>Animal nutrition, farm training, and farm management services for farmers across Kenya and East Africa.</p>
       ${socialIcons}
     </div>
     <div>
@@ -230,9 +230,9 @@ function homeBody() {
   const svgRefresh = `<svg viewBox="0 0 24 24"><path d="M17.65 6.35A7.958 7.958 0 0 0 12 4a8 8 0 1 0 7.75 10h-2.08a6 6 0 0 1-11.32-3A6 6 0 0 1 12 6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>`;
   return `<section class="hero">
   <div class="container hero-inner">
-    <div class="hero-badge">${svgSpark} Your cow care partner in Kenya</div>
+    <div class="hero-badge">${svgSpark} Your cattle care partner in Kenya</div>
     <h1>Feed better. <span class="accent">Manage better.</span> Produce more.</h1>
-    <p class="lead">Prodaco Services helps cow farmers get more milk from every cow — through professional training, farm consultancy, quality feeds, and hands-on farm services. Your farm, run like a business.</p>
+    <p class="lead">Prodaco Services helps farmers get more milk from every cow — through professional training, farm consultancy, quality feeds, and hands-on farm services. Your farm, run like a business.</p>
     <div class="hero-cta">
       <a href="tel:${PHONE_PRIMARY}" class="btn btn-gold">${svgCall} Call ${PHONE_PRIMARY.replace(/(\+\d{3})(\d{3})(\d{3})(\d{3})/,"$1 $2 $3$4")}</a>
       <a href="https://wa.me/${WA_NUMBER}" class="btn btn-wa">${svgChat} WhatsApp us</a>
@@ -268,7 +268,7 @@ function homeBody() {
   <div class="container">
     <div class="band-head">
       <span class="pill-badge">Our impact</span>
-      <h2>Helping cow farmers across Kenya produce more</h2>
+      <h2>Helping farmers across Kenya produce more</h2>
       <p>Practical training, quality feeds, and hands-on services — the work adds up.</p>
     </div>
     <div class="impact-card">
@@ -299,7 +299,7 @@ function homeBody() {
   <div class="container">
     <div class="section-head centered">
       <span class="pill-badge">Our services</span>
-      <h2>Your complete cow farming partner</h2>
+      <h2>Your complete cattle keeping partner</h2>
       <p>Five service lines, one goal: a healthier, more productive, more profitable herd.</p>
     </div>
 
@@ -320,7 +320,7 @@ function homeBody() {
     </div>
 
     <div class="service-row reverse">
-      <div class="service-media"><img src="${PHOTO.consultancy}" alt="cow farm consultancy"></div>
+      <div class="service-media"><img src="${PHOTO.consultancy}" alt="farm consultancy"></div>
       <div class="service-body">
         <span class="tag-sm">Consultancy</span>
         <h3>Know where your farm stands — and where it can go</h3>
@@ -575,7 +575,7 @@ function blogBody() {
   return `<section class="page-hero">
   <div class="container">
     <span class="pill-badge" style="background:rgba(255,255,255,.12);color:#fff">Blog</span>
-    <h1 style="margin-top:14px">Practical tips for productive cow farms</h1>
+    <h1 style="margin-top:14px">Practical tips for productive farms</h1>
     <p>Articles, guides and lessons from our work with farmers across Kenya. Written for the shed, not the classroom.</p>
   </div>
 </section>
