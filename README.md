@@ -1,7 +1,8 @@
 # Prodaco Services website
 
-Static marketing site for Prodaco Services (Kenyan animal nutrition & dairy
-farm services) with a tiny zero-dependency Node backend for the contact form.
+Static marketing site for Prodaco Services (Kenyan dairy and beef cattle
+nutrition and farm services) with a tiny zero-dependency Node backend for the
+contact form.
 
 ## What's here
 
@@ -11,8 +12,8 @@ website/
 │   ├── index.html         Home
 │   ├── training.html      Training options
 │   ├── consultancy.html   Farm benchmarking & organisation
-│   ├── nutrition.html     Silage, hay, dairymeal
-│   ├── comfort.html       Cow shade design
+│   ├── nutrition.html     Silage, hay, dairy and beef concentrates
+│   ├── comfort.html       Dairy housing, shade and beef feedlot design
 │   ├── activities.html    On-farm services
 │   ├── about.html         About the company
 │   ├── contact.html       Contact form (POSTs to /api/contact)
