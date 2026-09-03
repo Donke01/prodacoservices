@@ -194,7 +194,7 @@ function pageHead(p) {
 <link rel="canonical" href="${canonical}">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="apple-touch-icon" href="/favicon.png">
-<meta name="theme-color" content="#1c5763">
+<meta name="theme-color" content="#1d4ed8">
 <meta property="og:type" content="website">
 <meta property="og:title" content="${title}">
 <meta property="og:description" content="${p.desc}">
