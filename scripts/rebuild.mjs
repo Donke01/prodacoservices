@@ -57,27 +57,28 @@ const PHOTO = {
   blogSilage:  "https://images.unsplash.com/photo-1504867841338-3da010c6152c?auto=format&fit=crop&w=1200&q=80", // cattle eating grass
   blogCalf:    "https://images.unsplash.com/photo-1504868531014-6f6787aa186f?auto=format&fit=crop&w=1200&q=80", // young cows / calves
   blogShade:   "https://images.unsplash.com/photo-1636998980792-63f27ddea4e3?auto=format&fit=crop&w=1200&q=80", // cows in barn
+  blogBeef:    "https://images.unsplash.com/photo-1504867980221-c62ae681b301?auto=format&fit=crop&w=1200&q=80", // beef herd
 };
 
 const PAGES = [
   { file: "index.html",       nav: "home",         custom: "home",
-    title: "Animal Nutrition & Farm Management Services",
-    desc: "Prodaco Services — professional animal nutrition, farm training, consultancy, quality feeds, and on-farm services for farmers in Kenya. Call +254 716 767371." },
+    title: "Dairy & Beef Cattle Nutrition and Farm Services",
+    desc: "Prodaco Services helps dairy and beef farmers in Kenya improve milk yield, weight gain and profitability through nutrition, training, consultancy and on-farm services." },
   { file: "training.html",    nav: "training",     title: "Farm Training",
-    desc: "Farm visit, week-long management, month-long farm-assistant training, farmer field schools and training of trainers — practical farm training in Kenya." },
+    desc: "Practical dairy and beef cattle training in Kenya — farm visits, herd management, feeding, health, breeding, records and farmer field schools." },
   { file: "consultancy.html", nav: "consultancy",  title: "Farm Consultancy",
-    desc: "Farm benchmarking and farm organisation consultancy — see where your farm stands and get a clear plan to run it better." },
-  { file: "nutrition.html",   nav: "nutrition",    title: "Cow Nutrition — Silage, Hay & concentrates",
-    desc: "Quality silage, hay and concentrates for Kenyan farms. Consistent milk production all year round." },
-  { file: "comfort.html",     nav: "comfort",      title: "Cow Comfort & Shade Design",
-    desc: "Professional cow shade designs for Kenyan farms. Comfortable cows eat more, stress less, and give more milk." },
+    desc: "Dairy and beef farm benchmarking, enterprise planning and farm organisation — improve milk yield, weight gain, costs and herd performance." },
+  { file: "nutrition.html",   nav: "nutrition",    title: "Cattle Nutrition — Dairy & Beef Feeds",
+    desc: "Quality silage, hay and concentrates for dairy and beef cattle in Kenya — formulated for milk production, growth, breeding and finishing." },
+  { file: "comfort.html",     nav: "comfort",      title: "Cattle Housing, Comfort & Feedlot Design",
+    desc: "Professional housing, shade and feedlot designs for dairy and beef cattle in Kenya — built for comfort, health, growth and efficient handling." },
   { file: "activities.html",  nav: "activities",   title: "On-Farm Services — Silage, Rations & Animal Health",
-    desc: "Silage harvesting, ration formulation and animal health management — done professionally, on your farm." },
+    desc: "Silage harvesting, dairy and beef ration formulation, herd health and performance tracking — done professionally on your farm." },
   { file: "blog.html",        nav: "blog",         custom: "blog",
-    title: "Blog — Practical Cow Care Tips",
-    desc: "Articles, guides and lessons from Prodaco Services on silage-making, calf rearing, cow comfort, feeding and farm management." },
+    title: "Blog — Practical Dairy & Beef Cattle Tips",
+    desc: "Practical guides for dairy and beef farmers on feeding, calf rearing, housing, herd health, weight gain and farm management." },
   { file: "about.html",       nav: "about",        title: "About Prodaco Services",
-    desc: "A Kenyan animal nutrition and farm services company with one measure of success: your farm producing more." },
+    desc: "A Kenyan animal nutrition and farm services company helping dairy and beef farmers build healthier, more productive and profitable herds." },
   { file: "contact.html",     nav: "contact",      custom: "contact",
     title: "Contact Us — Quotes & Bookings",
     desc: "Get a quote or book a service. Call +254 716 767371 or WhatsApp us. We reply the same day." }
@@ -85,7 +86,7 @@ const PAGES = [
 
 /* -------- fragments -------- */
 
-const brandLogo = `<img class="brand-logo" src="/logo-header.png" alt="Prodaco Services — animal nutrition & farm services" width="170" height="114">`;
+const brandLogo = `<img class="brand-logo" src="/logo-header.png" alt="Prodaco Services — dairy and beef cattle nutrition and farm services" width="170" height="114">`;
 
 const contactStrip = `<div class="contact-strip">
   <div class="container">
@@ -108,8 +109,8 @@ const contactStrip = `<div class="contact-strip">
 function nav(active) {
   const items = [
     ["home","index.html","Home"],["training","training.html","Training"],
-    ["consultancy","consultancy.html","Consultancy"],["nutrition","nutrition.html","Cow Nutrition"],
-    ["comfort","comfort.html","Cow Comfort"],["activities","activities.html","Activities"],
+    ["consultancy","consultancy.html","Consultancy"],["nutrition","nutrition.html","Cattle Nutrition"],
+    ["comfort","comfort.html","Housing & Comfort"],["activities","activities.html","Activities"],
     ["blog","blog.html","Blog"],["about","about.html","About"],["contact","contact.html","Contact"]
   ];
   return `<nav class="site-nav" aria-label="Main navigation"><ul>${
@@ -142,7 +143,7 @@ const footer = `<footer class="site-footer">
   <div class="container footer-grid">
     <div>
       <h3>Prodaco Services</h3>
-      <p>Animal nutrition, farm training, and farm management services for farmers across Kenya and East Africa.</p>
+      <p>Dairy and beef cattle nutrition, training, consultancy, and farm management services across Kenya and East Africa.</p>
       ${socialIcons}
     </div>
     <div>
@@ -150,8 +151,8 @@ const footer = `<footer class="site-footer">
       <ul>
         <li><a href="training.html">Training</a></li>
         <li><a href="consultancy.html">Consultancy</a></li>
-        <li><a href="nutrition.html">Cow Nutrition</a></li>
-        <li><a href="comfort.html">Cow Comfort</a></li>
+        <li><a href="nutrition.html">Cattle Nutrition</a></li>
+        <li><a href="comfort.html">Housing &amp; Comfort</a></li>
         <li><a href="activities.html">On-Farm Services</a></li>
       </ul>
     </div>
@@ -234,9 +235,9 @@ function homeBody() {
   const svgRefresh = `<svg viewBox="0 0 24 24"><path d="M17.65 6.35A7.958 7.958 0 0 0 12 4a8 8 0 1 0 7.75 10h-2.08a6 6 0 0 1-11.32-3A6 6 0 0 1 12 6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>`;
   return `<section class="hero">
   <div class="container hero-inner">
-    <div class="hero-badge">${svgSpark} Your cow care partner in Kenya</div>
+    <div class="hero-badge">${svgSpark} Dairy &amp; beef cattle support in Kenya</div>
     <h1>Feed better. <span class="accent">Manage better.</span> Produce more.</h1>
-    <p class="lead">Prodaco Services helps farmers get more milk from every cow — through professional training, farm consultancy, quality feeds, and hands-on farm services. Your farm, run like a business.</p>
+    <p class="lead">Prodaco Services helps dairy and beef farmers produce more — more milk, better weight gain, healthier cattle and stronger margins — through professional training, farm consultancy, quality feeds, and hands-on farm services.</p>
     <div class="hero-cta">
       <a href="tel:${PHONE_PRIMARY}" class="btn btn-gold">${svgCall} Call ${PHONE_PRIMARY.replace(/(\+\d{3})(\d{3})(\d{3})(\d{3})/,"$1 $2 $3$4")}</a>
       <a href="https://wa.me/${WA_NUMBER}" class="btn btn-wa">${svgChat} WhatsApp us</a>
@@ -256,7 +257,7 @@ function homeBody() {
     <div class="tile">
       <div class="tile-icon">${svgSilo}</div>
       <h3>Quality Feeds</h3>
-      <p>Silage, hay and concentrates supplied year-round so production doesn't drop when the dry season hits.</p>
+      <p>Silage, hay and dairy or beef concentrates supplied year-round for milk production, growth and finishing.</p>
       <a href="nutrition.html" class="btn-outline-dark">Our products →</a>
     </div>
     <div class="tile">
@@ -272,8 +273,8 @@ function homeBody() {
   <div class="container">
     <div class="band-head">
       <span class="pill-badge">Our impact</span>
-      <h2>Helping farmers across Kenya produce more</h2>
-      <p>Practical training, quality feeds, and hands-on services — the work adds up.</p>
+      <h2>Helping dairy and beef farmers produce more</h2>
+      <p>Practical training, quality feeds, and hands-on services for productive, profitable herds.</p>
     </div>
     <div class="impact-card">
       <div class="impact-grid">
@@ -294,7 +295,7 @@ function homeBody() {
       <div class="benefit"><div class="b-ico">${svgShield}</div><h4>Practical, not theoretical</h4><p>Every service happens on real farms with real cows. We train by doing and advise from experience.</p></div>
       <div class="benefit"><div class="b-ico">${svgLeaf}</div><h4>Built for local conditions</h4><p>Feeds, rations, designs and advice built for Kenyan forages, climates and market prices.</p></div>
       <div class="benefit"><div class="b-ico">${svgHands}</div><h4>One partner, whole farm</h4><p>Feeding, housing, health, management and energy — we cover the full picture so gains stick.</p></div>
-      <div class="benefit"><div class="b-ico">${svgRefresh}</div><h4>We follow up</h4><p>The job isn't finished when the invoice is paid. It's finished when the results show in the milk pail.</p></div>
+      <div class="benefit"><div class="b-ico">${svgRefresh}</div><h4>We follow up</h4><p>The job isn't finished when the invoice is paid. It's finished when the results show in milk yield, weight gain and farm profit.</p></div>
     </div>
   </div>
 </section>
@@ -303,7 +304,7 @@ function homeBody() {
   <div class="container">
     <div class="section-head centered">
       <span class="pill-badge">Our services</span>
-      <h2>Your complete cow care partner</h2>
+      <h2>Your dairy and beef cattle partner</h2>
       <p>Five service lines, one goal: a healthier, more productive, more profitable herd.</p>
     </div>
 
@@ -311,8 +312,8 @@ function homeBody() {
       <div class="service-media"><img src="${PHOTO.training}" alt="Farm worker carrying fodder during hands-on training" width="1200" height="800" loading="lazy"></div>
       <div class="service-body">
         <span class="tag-sm">Training</span>
-        <h3>Practical cow training that sticks</h3>
-        <p>From 1-day farm visits to a full month of farm-assistant training — plus Farmer Field Schools and training of trainers for cooperatives and NGO programs.</p>
+        <h3>Practical dairy and beef training that sticks</h3>
+        <p>From 1-day farm visits to a full month of farm-assistant training — covering feeding, herd health, breeding, records, dairy routines and beef growth or finishing.</p>
         <ul>
           <li><strong>1-day farm visits</strong> — diagnostic + practical recommendations</li>
           <li><strong>1-week management</strong> — for owners and managers</li>
@@ -328,9 +329,9 @@ function homeBody() {
       <div class="service-body">
         <span class="tag-sm">Consultancy</span>
         <h3>Know where your farm stands — and where it can go</h3>
-        <p>Farm benchmarking and farm organisation. Real numbers, real recommendations, a clear plan you can act on.</p>
+        <p>Dairy and beef enterprise benchmarking and farm organisation. Real numbers, real recommendations, a clear plan you can act on.</p>
         <ul>
-          <li><strong>Farm benchmarking</strong> — compare your farm to top performers</li>
+          <li><strong>Farm benchmarking</strong> — compare milk, growth, health and cost performance</li>
           <li><strong>Farm organisation</strong> — SOPs, record keeping, roles</li>
           <li>Honest advice on what pays and what doesn't</li>
         </ul>
@@ -341,13 +342,14 @@ function homeBody() {
     <div class="service-row">
       <div class="service-media"><img src="${PHOTO.nutrition}" alt="Silage and cow feed" width="1200" height="800" loading="lazy"></div>
       <div class="service-body">
-        <span class="tag-sm">Cow Nutrition</span>
-        <h3>Quality silage, hay &amp; concentrates — year-round</h3>
-        <p>Feeds you can trust, supplied consistently so production doesn't drop when the dry season hits.</p>
+        <span class="tag-sm">Cattle Nutrition</span>
+        <h3>Quality feeds for milk, growth &amp; finishing</h3>
+        <p>Silage, hay and concentrates selected or formulated for your dairy or beef production target.</p>
         <ul>
           <li>Maize and Boma Rhodes <strong>silage</strong></li>
           <li>Baled <strong>hay</strong> — Rhodes, Lucerne</li>
-          <li>Custom <strong>concentrates</strong> mixes</li>
+          <li><strong>Dairy meal</strong> and custom dairy concentrates</li>
+          <li><strong>Beef grower and finisher</strong> concentrates</li>
         </ul>
         <a class="btn btn-green" href="nutrition.html">Our products</a>
       </div>
@@ -356,12 +358,13 @@ function homeBody() {
     <div class="service-row reverse">
       <div class="service-media"><img src="${PHOTO.comfort}" alt="Cows housed comfortably in a well-designed dairy shelter" width="1200" height="800" loading="lazy"></div>
       <div class="service-body">
-        <span class="tag-sm">Cow Comfort</span>
-        <h3>Housing that pays for itself</h3>
-        <p>Professional cow shade designs. Comfortable cows eat more, stress less, and give more milk.</p>
+        <span class="tag-sm">Housing &amp; Comfort</span>
+        <h3>Dairy housing and beef facilities that work</h3>
+        <p>Professional shades, housing and feedlot layouts. Comfortable cattle eat better, stay healthier and perform more efficiently.</p>
         <ul>
-          <li>Free-stall &amp; deep-bed designs sized to your herd</li>
-          <li>Ventilation, drainage, water access built in</li>
+          <li>Dairy free-stall &amp; deep-bed designs sized to your herd</li>
+          <li>Beef pens, feedlot layouts and handling flow</li>
+          <li>Ventilation, drainage, shade and water access built in</li>
           <li>Bill of quantities for local builders</li>
         </ul>
         <a class="btn btn-green" href="comfort.html">Shade designs</a>
@@ -373,12 +376,12 @@ function homeBody() {
       <div class="service-body">
         <span class="tag-sm">On-Farm Services</span>
         <h3>Done properly, on your farm</h3>
-        <p>Silage harvesting, ration formulation and animal health management — with equipment, expertise, and follow-up.</p>
+        <p>Silage harvesting, dairy and beef ration formulation, animal health and performance tracking — with expertise and follow-up.</p>
         <ul>
           <li><strong>Silage harvesting</strong> — chop, pack, seal</li>
-          <li><strong>Ration formulation</strong> from your local ingredients</li>
+          <li><strong>Ration formulation</strong> for milk yield, growth or finishing</li>
           <li><strong>Animal health</strong> management protocols and vaccinations</li>
-          <li><strong>Milk hygiene</strong> and quality management support</li>
+          <li><strong>Milk hygiene</strong> plus beef weight and finishing support</li>
         </ul>
         <a class="btn btn-green" href="activities.html">Farm services</a>
       </div>
@@ -393,7 +396,7 @@ function homeBody() {
       <h2>Three steps to a more productive farm</h2>
     </div>
     <div class="steps">
-      <div class="step"><div class="n">1</div><h3>Call or WhatsApp</h3><p>Tell us about your farm and what you want to improve — milk yield, feed costs, housing, or management.</p></div>
+      <div class="step"><div class="n">1</div><h3>Call or WhatsApp</h3><p>Tell us about your dairy or beef enterprise and what you want to improve — milk yield, weight gain, feed costs, housing, health, or management.</p></div>
       <div class="step"><div class="n">2</div><h3>We visit &amp; assess</h3><p>We see your farm with our own eyes and give you an honest picture of where you stand.</p></div>
       <div class="step"><div class="n">3</div><h3>You get a plan &amp; a quote</h3><p>Clear recommendations, clear pricing. You choose what to take up — we deliver and follow through.</p></div>
     </div>
@@ -532,8 +535,10 @@ function contactBody() {
             <option>Training of trainers / Farmer Field School</option>
             <option>Consultancy — farm benchmarking</option>
             <option>Consultancy — farm organisation</option>
+            <option>Dairy enterprise support</option>
+            <option>Beef enterprise setup / finishing</option>
             <option>Feeds — silage / hay / concentrates</option>
-            <option>Cow shade design</option>
+            <option>Cattle housing / shade / feedlot design</option>
             <option>Silage harvesting</option>
             <option>Ration formulation</option>
             <option>Animal health management</option>
@@ -542,7 +547,7 @@ function contactBody() {
         </div>
         <div>
           <label for="message">About your farm</label>
-          <textarea id="message" name="message" rows="5" placeholder="How many cows, what you want to improve, and any timelines..." required></textarea>
+          <textarea id="message" name="message" rows="5" placeholder="Dairy or beef, herd size, what you want to improve, and any timelines..." required></textarea>
         </div>
         <div>
           <button type="submit" class="btn btn-green">Send Enquiry</button>
@@ -567,13 +572,16 @@ function contactBody() {
 function blogBody() {
   const articles = [
     { tag: "Feeds",    img: PHOTO.blogSilage, title: "Making silage that lasts the dry season",
-      excerpt: "The five things that decide whether your silage keeps cows in milk from July to October — or turns brown and mouldy by August.",
+      excerpt: "The five things that decide whether your silage supports steady milk or weight gain through the dry months — or turns brown and mouldy.",
       meta: "Coming soon" },
-    { tag: "Calves",   img: PHOTO.blogCalf,   title: "Calf rearing: the first 90 days decide the next 5 years",
-      excerpt: "Why the calf you neglect at 3 weeks becomes the heifer that never gives 20 litres. A practical protocol.",
+    { tag: "Calves",   img: PHOTO.blogCalf,   title: "Calf rearing: the first 90 days shape lifetime performance",
+      excerpt: "A practical protocol for strong dairy replacements and fast-growing beef calves, from colostrum to weaning.",
       meta: "Coming soon" },
     { tag: "Housing",  img: PHOTO.blogShade,  title: "Cow comfort: the free-stall design that pays for itself in 18 months",
       excerpt: "Dimensions, ventilation, drainage, and the small mistakes that cost you two litres per cow per day.",
+      meta: "Coming soon" },
+    { tag: "Beef",     img: PHOTO.blogBeef,   title: "Beef finishing: target weight, days and feed cost",
+      excerpt: "How to set a finishing target, track average daily gain and know whether every extra day on feed is still paying.",
       meta: "Coming soon" },
   ];
   return `<section class="page-hero">
