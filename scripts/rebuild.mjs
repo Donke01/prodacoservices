@@ -459,7 +459,7 @@ function homeBody() {
 function contactBody() {
   return `<section class="page-hero">
   <div class="container">
-    <span class="pill-badge" style="background:rgba(255,255,255,.12);color:#fff">Get in touch</span>
+    <span class="pill-badge">Get in touch</span>
     <h1 style="margin-top:14px">Contact Us</h1>
     <p>Contact us to request a farm assessment, confirm service availability or obtain a detailed quotation for dairy and beef cattle services.</p>
   </div>
@@ -586,7 +586,7 @@ function blogBody() {
   ];
   return `<section class="page-hero">
   <div class="container">
-    <span class="pill-badge" style="background:rgba(255,255,255,.12);color:#fff">Blog</span>
+    <span class="pill-badge">Blog</span>
     <h1 style="margin-top:14px">Practical tips for productive farms</h1>
     <p>Articles, guides and lessons from our work with farmers across Kenya. Written for the shed, not the classroom.</p>
   </div>
