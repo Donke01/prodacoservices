@@ -207,7 +207,7 @@ img { max-width: 100%; display: block; }
   .service-row { margin: 28px auto 38px; }
   .service-row + .service-row { padding-top: 38px; }
   .service-media { max-width: 560px; }
-  .service-media img { height: clamp(160px, 50vw, 210px); }
+  .service-media img { height: clamp(180px, 62vw, 250px); }
 }
 
 /* Landscape field-work carousel */
