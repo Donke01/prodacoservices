@@ -281,53 +281,53 @@ function homeBody() {
     </div>
 
     <div class="service-row">
-      <div class="service-media"><img src="${PHOTO.training}" alt="Farm worker carrying fodder during hands-on training" width="1200" height="800" loading="lazy"></div>
       <div class="service-body">
         <span class="tag-sm">Training</span>
         <h3>Farm Training</h3>
         <p>On-farm programmes for owners, managers, workers, farmer groups and extension teams.</p>
         <a class="btn btn-green" href="training.html">See training options</a>
       </div>
+      <div class="service-media"><img src="${PHOTO.training}" alt="Farmer carrying harvested fodder during practical cattle-feeding work" width="1200" height="800" loading="lazy"></div>
     </div>
 
-    <div class="service-row reverse">
-      <div class="service-media"><img src="${PHOTO.consultancy}" alt="Close-up of cows on a farm" width="1200" height="800" loading="lazy"></div>
+    <div class="service-row">
       <div class="service-body">
         <span class="tag-sm">Consultancy</span>
         <h3>Farm Consultancy</h3>
         <p>Benchmarking, operating systems and improvement plans based on production and cost records.</p>
         <a class="btn btn-green" href="consultancy.html">Consultancy services</a>
       </div>
+      <div class="service-media"><img src="${PHOTO.consultancy}" alt="Dairy cow being assessed as part of cattle farm consultancy" width="1200" height="800" loading="lazy"></div>
     </div>
 
     <div class="service-row">
-      <div class="service-media"><img src="${PHOTO.nutrition}" alt="Silage and cow feed" width="1200" height="800" loading="lazy"></div>
       <div class="service-body">
         <span class="tag-sm">Cattle Nutrition</span>
         <h3>Cattle Nutrition</h3>
         <p>Silage, hay and concentrates for milk production, young stock, breeding, growth and finishing.</p>
         <a class="btn btn-green" href="nutrition.html">Our products</a>
       </div>
+      <div class="service-media"><img src="${PHOTO.nutrition}" alt="Cattle eating forage as part of a balanced feeding programme" width="1200" height="800" loading="lazy"></div>
     </div>
 
-    <div class="service-row reverse">
-      <div class="service-media"><img src="${PHOTO.comfort}" alt="Cows housed comfortably in a well-designed dairy shelter" width="1200" height="800" loading="lazy"></div>
+    <div class="service-row">
       <div class="service-body">
         <span class="tag-sm">Housing &amp; Comfort</span>
         <h3>Housing and Facilities</h3>
         <p>Dairy housing, cattle shades, beef pens and feedlot layouts designed for comfort and efficient work.</p>
         <a class="btn btn-green" href="comfort.html">Shade designs</a>
       </div>
+      <div class="service-media"><img src="${PHOTO.comfort}" alt="Cattle resting in a covered barn designed for comfort" width="1200" height="800" loading="lazy"></div>
     </div>
 
     <div class="service-row">
-      <div class="service-media"><img src="${PHOTO.activities}" alt="Herd of cattle receiving on-farm services" width="1200" height="800" loading="lazy"></div>
       <div class="service-body">
         <span class="tag-sm">On-Farm Services</span>
         <h3>On-Farm Services</h3>
         <p>Silage harvesting, ration formulation, herd-health planning and performance monitoring.</p>
         <a class="btn btn-green" href="activities.html">Farm services</a>
       </div>
+      <div class="service-media"><img src="${PHOTO.activities}" alt="Cattle herd supported through on-farm production services" width="1200" height="800" loading="lazy"></div>
     </div>
   </div>
 </section>

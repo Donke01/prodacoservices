@@ -190,10 +190,12 @@ img { max-width: 100%; display: block; }
 .impact-grid .lbl { font-family: var(--font-display); font-size: .75rem; color: var(--ink-soft); margin-top: 10px; text-transform: uppercase; letter-spacing: .1em; font-weight: 600; }
 @media (max-width: 620px) { .impact-card { padding: 32px 22px; } }
 
-/* Rich service row: alternating image + text */
-.service-row { display: grid; grid-template-columns: 1.05fr .95fr; gap: 40px; align-items: center; margin: 40px 0; }
-.service-row.reverse .service-media { order: 2; }
-.service-media img { width: 100%; height: 100%; min-height: 280px; max-height: 420px; object-fit: cover; border-radius: 16px; box-shadow: 0 8px 30px rgba(11,31,58,.15); }
+/* Service details followed by the corresponding image */
+.service-row { display: flex; flex-direction: column; gap: 24px; max-width: 960px; margin: 44px auto 64px; }
+.service-row + .service-row { border-top: 1px solid var(--line); padding-top: 64px; }
+.service-body { max-width: 720px; margin: 0 auto; text-align: center; }
+.service-media { width: 100%; }
+.service-media img { display: block; width: 100%; aspect-ratio: 16 / 8; object-fit: cover; border-radius: 16px; box-shadow: 0 8px 30px rgba(11,31,58,.15); }
 .service-body .tag-sm { display: inline-block; background: #f2f4f7; color: var(--green-900); border: 1px solid var(--line); font-family: var(--font-display); font-size: .6875rem; font-weight: 700; padding: 4px 12px; border-radius: 999px; text-transform: uppercase; letter-spacing: .1em; }
 .service-body h3 { color: var(--green-900); font-size: clamp(1.375rem, 2.5vw, 1.75rem); margin: 10px 0 12px; }
 .service-body p { color: var(--ink-soft); margin-bottom: 16px; }
@@ -202,8 +204,9 @@ img { max-width: 100%; display: block; }
 .service-body ul li::before { content: "✓"; position: absolute; left: 0; color: var(--gold-dark); font-weight: 800; }
 .service-body ul li strong { color: var(--green-900); }
 @media (max-width: 800px) {
-  .service-row { grid-template-columns: 1fr; gap: 24px; }
-  .service-row.reverse .service-media { order: 0; }
+  .service-row { margin: 36px auto 48px; }
+  .service-row + .service-row { padding-top: 48px; }
+  .service-media img { aspect-ratio: 16 / 10; }
 }
 
 /* Reach-us channel cards (Merucow "How to Request Our Services") */
