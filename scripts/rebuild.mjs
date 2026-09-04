@@ -23,6 +23,11 @@ const PHONE_SECONDARY = "+254235919580";
 const WA_NUMBER       = "254716767371";
 const EMAIL           = "info@prodacoservices.com";
 
+const SVG_CALL = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.5c-1.2 0-2.5-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.5-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.3-.7.2-1-.4-1.1-.6-2.4-.6-3.6 0-.5-.5-1-1-1H4c-.5 0-1 .5-1 1 0 9.4 7.6 17 17 17 .5 0 1-.5 1-1v-3.4c0-.5-.5-1-1-1z"/></svg>`;
+const SVG_WHATSAPP = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1s-.8.9-1 1.1c-.2.2-.4.2-.7.1-1.6-.7-3-1.6-4-3-.3-.5.3-.5.9-1.5.1-.2 0-.4 0-.5s-.7-1.7-1-2.3c-.3-.5-.5-.5-.7-.5H7.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 5 4.3 2.7 1.1 2.7.7 3.2.7.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.3-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5C8.3 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>`;
+const SVG_EMAIL = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>`;
+const SVG_FORM = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm1 7V4.5L19.5 9H15zM8 13h8v2H8v-2zm0 4h8v2H8v-2z"/></svg>`;
+
 // TODO(client): replace placeholder handles with real ones, then rerun rebuild.
 const SOCIAL = {
   facebook:  "https://facebook.com/",
@@ -177,8 +182,8 @@ const footer = `<footer class="site-footer">
 </footer>`;
 
 const fabs = `<div class="fab-stack">
-  <a class="fab fab-wa" href="https://wa.me/${WA_NUMBER}?text=Hello%20Prodaco%2C%20I%27d%20like%20to%20ask%20about%20your%20services." aria-label="WhatsApp Prodaco Services">💬</a>
-  <a class="fab fab-call" href="tel:${PHONE_PRIMARY}" aria-label="Call Prodaco Services">📞</a>
+  <a class="fab fab-wa" href="https://wa.me/${WA_NUMBER}?text=Hello%20Prodaco%2C%20I%27d%20like%20to%20ask%20about%20your%20services." aria-label="WhatsApp Prodaco Services">${SVG_WHATSAPP}</a>
+  <a class="fab fab-call" href="tel:${PHONE_PRIMARY}" aria-label="Call Prodaco Services">${SVG_CALL}</a>
 </div>`;
 
 function pageHead(p) {
@@ -219,16 +224,9 @@ const pageTail = () => `${fabs}\n${footer}\n<script src="/site.js?v=${V_JS}" def
 /* -------- page bodies -------- */
 
 function homeBody() {
-  const svgCall = `<svg viewBox="0 0 24 24"><path d="M20 15.5c-1.2 0-2.5-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.5-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.3-.7.2-1-.4-1.1-.6-2.4-.6-3.6 0-.5-.5-1-1-1H4c-.5 0-1 .5-1 1 0 9.4 7.6 17 17 17 .5 0 1-.5 1-1v-3.4c0-.5-.5-1-1-1z"/></svg>`;
-  const svgChat = `<svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1s-.8.9-1 1.1c-.2.2-.4.2-.7.1-1.6-.7-3-1.6-4-3-.3-.5.3-.5.9-1.5.1-.2 0-.4 0-.5s-.7-1.7-1-2.3c-.3-.5-.5-.5-.7-.5H7.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 5 4.3 2.7 1.1 2.7.7 3.2.7.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.3-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5C8.3 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>`;
-  const svgArrow = `<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>`;
+  const svgCall = SVG_CALL;
+  const svgChat = SVG_WHATSAPP;
   const svgSpark = `<svg viewBox="0 0 24 24"><path d="M12 2l2 6 6 2-6 2-2 6-2-6-6-2 6-2 2-6z"/></svg>`;
-  // Training: instructor and apprentice, clearer than a graduation cap
-  const svgSchool = `<svg viewBox="0 0 24 24"><path d="M12 4a3 3 0 100 6 3 3 0 000-6zM6 20v-2c0-1.7 1.3-3 3-3h6c1.7 0 3 1.3 3 3v2H6zm14-7v-2h-3v2h3zm-1-4l2-2-1.4-1.4L17.6 7 19 8.4z"/></svg>`;
-  // Feeds: hay bale (rounded rectangle with horizontal strands)
-  const svgSilo = `<svg viewBox="0 0 24 24"><path d="M4 6h16c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V8c0-1.1.9-2 2-2zm-.5 4.5h17v-1h-17v1zm0 3h17v-1h-17v1zm0 3h17v-1h-17v1z"/></svg>`;
-  // Consultancy: clipboard with checkmark
-  const svgChart = `<svg viewBox="0 0 24 24"><path d="M9 2h6v2h3c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2h3V2zm2 2v2h2V4h-2zm-.5 13.5l5.5-5.5-1.4-1.4-4.1 4.1-1.6-1.6L7.5 14.5l3 3z"/></svg>`;
   const svgShield = `<svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4zm-2 16l-4-4 1.4-1.4L10 14.2l6.6-6.6L18 9l-8 8z"/></svg>`;
   const svgHands = `<svg viewBox="0 0 24 24"><path d="M12 12c2.2 0 4-1.8 4-4s-1.8-4-4-4-4 1.8-4 4 1.8 4 4 4zm0 2c-2.7 0-8 1.3-8 4v2h16v-2c0-2.7-5.3-4-8-4z"/></svg>`;
   const svgLeaf = `<svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.2 3.8 21.7l1.9.6c.7-1.9 1.5-3.5 2.4-4.9 2 .7 4.1.5 6-.7 4.4-2.6 6-9.2 5-13.7-.5-.1-1.1-.1-1.6-.1L17 8z"/></svg>`;
@@ -237,7 +235,7 @@ function homeBody() {
   <div class="container hero-inner">
     <div class="hero-badge">${svgSpark} Dairy and beef cattle services in Kenya</div>
     <h1>Stronger herd performance. <span class="accent">Better farm returns.</span></h1>
-    <p class="lead">Prodaco Services supports dairy and beef enterprises with cattle nutrition, production benchmarking, staff development, housing design and on-farm technical services. Every assignment is focused on measurable improvements in milk yield, growth rate, herd health and cost efficiency.</p>
+    <p class="lead">Practical nutrition, training and farm-management support for profitable dairy and beef production.</p>
     <div class="hero-cta">
       <a href="tel:${PHONE_PRIMARY}" class="btn btn-gold">${svgCall} Call ${PHONE_PRIMARY.replace(/(\+\d{3})(\d{3})(\d{3})(\d{3})/,"$1 $2 $3$4")}</a>
       <a href="https://wa.me/${WA_NUMBER}" class="btn btn-wa">${svgChat} WhatsApp us</a>
@@ -246,35 +244,11 @@ function homeBody() {
   </div>
 </section>
 
-<div class="tiles-band">
-  <div class="container tiles-grid">
-    <div class="tile">
-      <div class="tile-icon">${svgSchool}</div>
-      <h3>Technical Training</h3>
-      <p>Structured, practical programmes for farm owners, managers, farm assistants, producer groups and extension teams.</p>
-      <a href="training.html" class="btn-outline-dark">See training →</a>
-    </div>
-    <div class="tile">
-      <div class="tile-icon">${svgSilo}</div>
-      <h3>Feed Solutions</h3>
-      <p>Silage, hay and stage-specific concentrates for dairy production, young-stock development, beef growth and finishing.</p>
-      <a href="nutrition.html" class="btn-outline-dark">Our products →</a>
-    </div>
-    <div class="tile">
-      <div class="tile-icon">${svgChart}</div>
-      <h3>Farm Consultancy</h3>
-      <p>Enterprise benchmarking, management systems and practical improvement plans based on farm records and production targets.</p>
-      <a href="consultancy.html" class="btn-outline-dark">Get advice →</a>
-    </div>
-  </div>
-</div>
-
 <section class="impact-band">
   <div class="container">
     <div class="band-head">
       <span class="pill-badge">Our impact</span>
-      <h2>Supporting stronger cattle enterprises across Kenya</h2>
-      <p>Farmer training, farm assessment and technical services focused on measurable production outcomes.</p>
+      <h2>Supporting cattle enterprises across Kenya</h2>
     </div>
     <div class="impact-card">
       <div class="impact-grid">
@@ -288,14 +262,13 @@ function homeBody() {
   <div class="container">
     <div class="section-head centered">
       <span class="pill-badge">Why Prodaco</span>
-      <h2>Technical support built around farm performance</h2>
-      <p>Our recommendations reflect the herd, feed resources, facilities, staff capability and commercial objectives of each farm.</p>
+      <h2>Why farmers choose Prodaco</h2>
     </div>
     <div class="benefits">
-      <div class="benefit"><div class="b-ico">${svgShield}</div><h4>Applied farm expertise</h4><p>We work with your cattle, feed resources, facilities and records so that technical advice can be implemented by your team.</p></div>
-      <div class="benefit"><div class="b-ico">${svgLeaf}</div><h4>Locally relevant solutions</h4><p>Recommendations account for Kenyan feed resources, climate, labour availability, production systems and market conditions.</p></div>
-      <div class="benefit"><div class="b-ico">${svgHands}</div><h4>Whole-enterprise assessment</h4><p>Nutrition, health, housing, staff capability and management controls are reviewed as one production system.</p></div>
-      <div class="benefit"><div class="b-ico">${svgRefresh}</div><h4>Performance follow-up</h4><p>Follow-up reviews milk yield, growth, reproductive performance, feed efficiency and the financial effect of agreed changes.</p></div>
+      <div class="benefit"><div class="b-ico">${svgShield}</div><h4>Practical expertise</h4><p>Advice your farm team can implement.</p></div>
+      <div class="benefit"><div class="b-ico">${svgLeaf}</div><h4>Local relevance</h4><p>Solutions suited to Kenyan farm conditions.</p></div>
+      <div class="benefit"><div class="b-ico">${svgHands}</div><h4>Complete assessment</h4><p>Nutrition, health, housing, staff and records.</p></div>
+      <div class="benefit"><div class="b-ico">${svgRefresh}</div><h4>Measured progress</h4><p>Follow-up against agreed performance targets.</p></div>
     </div>
   </div>
 </section>
@@ -304,22 +277,15 @@ function homeBody() {
   <div class="container">
     <div class="section-head centered">
       <span class="pill-badge">Our services</span>
-      <h2>Integrated services for dairy and beef enterprises</h2>
-      <p>Our five service areas support herd productivity, operational control and long-term farm profitability.</p>
+      <h2>Dairy and beef services</h2>
     </div>
 
     <div class="service-row">
       <div class="service-media"><img src="${PHOTO.training}" alt="Farm worker carrying fodder during hands-on training" width="1200" height="800" loading="lazy"></div>
       <div class="service-body">
         <span class="tag-sm">Training</span>
-        <h3>Competency-based cattle production training</h3>
-        <p>Programmes range from one-day farm coaching to month-long farm-assistant development. Content is matched to dairy, cow-calf, growing or finishing enterprises.</p>
-        <ul>
-          <li><strong>One-day farm coaching:</strong> technical assessment and on-site instruction</li>
-          <li><strong>One-week management programme:</strong> for owners and supervisors</li>
-          <li><strong>One-month farm-assistant programme:</strong> structured practical competency development</li>
-          <li>Farmer Field Schools and training-of-trainers programmes</li>
-        </ul>
+        <h3>Farm Training</h3>
+        <p>On-farm programmes for owners, managers, workers, farmer groups and extension teams.</p>
         <a class="btn btn-green" href="training.html">See training options</a>
       </div>
     </div>
@@ -328,13 +294,8 @@ function homeBody() {
       <div class="service-media"><img src="${PHOTO.consultancy}" alt="Close-up of cows on a farm" width="1200" height="800" loading="lazy"></div>
       <div class="service-body">
         <span class="tag-sm">Consultancy</span>
-        <h3>Turn farm records into management decisions</h3>
-        <p>We benchmark dairy and beef enterprises, establish performance targets and develop practical management systems for the farm team.</p>
-        <ul>
-          <li><strong>Performance benchmarking:</strong> milk, growth, fertility, health and cost indicators</li>
-          <li><strong>Farm organisation:</strong> SOPs, records, roles and reporting routines</li>
-          <li>Prioritised recommendations linked to commercial objectives</li>
-        </ul>
+        <h3>Farm Consultancy</h3>
+        <p>Benchmarking, operating systems and improvement plans based on production and cost records.</p>
         <a class="btn btn-green" href="consultancy.html">Consultancy services</a>
       </div>
     </div>
@@ -343,14 +304,8 @@ function homeBody() {
       <div class="service-media"><img src="${PHOTO.nutrition}" alt="Silage and cow feed" width="1200" height="800" loading="lazy"></div>
       <div class="service-body">
         <span class="tag-sm">Cattle Nutrition</span>
-        <h3>Nutrition programmes for every production stage</h3>
-        <p>Forages and concentrates are matched to animal class, liveweight, production stage, available feed resources and performance target.</p>
-        <ul>
-          <li>Maize and Boma Rhodes <strong>silage</strong></li>
-          <li>Baled <strong>Rhodes grass and lucerne hay</strong></li>
-          <li><strong>Dairy concentrates</strong> for stage and production level</li>
-          <li><strong>Beef grower and finisher concentrates</strong></li>
-        </ul>
+        <h3>Cattle Nutrition</h3>
+        <p>Silage, hay and concentrates for milk production, young stock, breeding, growth and finishing.</p>
         <a class="btn btn-green" href="nutrition.html">Our products</a>
       </div>
     </div>
@@ -359,14 +314,8 @@ function homeBody() {
       <div class="service-media"><img src="${PHOTO.comfort}" alt="Cows housed comfortably in a well-designed dairy shelter" width="1200" height="800" loading="lazy"></div>
       <div class="service-body">
         <span class="tag-sm">Housing &amp; Comfort</span>
-        <h3>Purpose-built cattle housing and handling facilities</h3>
-        <p>We plan dairy housing, cattle shades, beef pens and feedlot layouts around animal comfort, hygiene, workflow and future herd expansion.</p>
-        <ul>
-          <li>Dairy free-stall and deep-bedded housing</li>
-          <li>Beef pens, feedlot layouts and cattle-handling flow</li>
-          <li>Ventilation, drainage, shade, feed-bunk and water access</li>
-          <li>Dimensions and bill of quantities for implementation</li>
-        </ul>
+        <h3>Housing and Facilities</h3>
+        <p>Dairy housing, cattle shades, beef pens and feedlot layouts designed for comfort and efficient work.</p>
         <a class="btn btn-green" href="comfort.html">Shade designs</a>
       </div>
     </div>
@@ -375,14 +324,8 @@ function homeBody() {
       <div class="service-media"><img src="${PHOTO.activities}" alt="Herd of cattle receiving on-farm services" width="1200" height="800" loading="lazy"></div>
       <div class="service-body">
         <span class="tag-sm">On-Farm Services</span>
-        <h3>Specialist services delivered on your farm</h3>
-        <p>Our team supports feed conservation, ration formulation, preventive herd-health planning and production monitoring.</p>
-        <ul>
-          <li><strong>Silage harvesting:</strong> maturity assessment, chopping, compaction and sealing</li>
-          <li><strong>Ration formulation:</strong> dairy production, young stock, growth and finishing</li>
-          <li><strong>Herd-health planning:</strong> preventive schedules and management protocols</li>
-          <li><strong>Performance monitoring:</strong> milk, reproduction, liveweight and feed-use records</li>
-        </ul>
+        <h3>On-Farm Services</h3>
+        <p>Silage harvesting, ration formulation, herd-health planning and performance monitoring.</p>
         <a class="btn btn-green" href="activities.html">Farm services</a>
       </div>
     </div>
@@ -393,12 +336,12 @@ function homeBody() {
   <div class="container">
     <div class="section-head centered">
       <span class="pill-badge">Getting started</span>
-      <h2>Start with a clear production objective</h2>
+      <h2>How it works</h2>
     </div>
     <div class="steps">
-      <div class="step"><div class="n">1</div><h3>Share your production goals</h3><p>Tell us about the enterprise, herd size, current performance and the result you want to achieve.</p></div>
-      <div class="step"><div class="n">2</div><h3>Complete a technical assessment</h3><p>Where required, we visit the farm to review cattle, feed resources, facilities, records and operating routines.</p></div>
-      <div class="step"><div class="n">3</div><h3>Receive recommendations and a quotation</h3><p>You receive a defined scope of work, priority actions, implementation options and transparent pricing.</p></div>
+      <div class="step"><div class="n">1</div><h3>Tell us your goal</h3><p>Share your enterprise type, herd size and priority.</p></div>
+      <div class="step"><div class="n">2</div><h3>We assess the need</h3><p>We review the farm where a visit is required.</p></div>
+      <div class="step"><div class="n">3</div><h3>Receive a clear plan</h3><p>Get the recommended scope, actions and price.</p></div>
     </div>
   </div>
 </section>
@@ -407,50 +350,10 @@ function homeBody() {
   <div class="container">
     <div class="cta-band">
       <div>
-        <h2>Discuss your herd-performance priorities</h2>
-        <p>Call ${PHONE_PRIMARY.replace(/(\+\d{3})(\d{3})(\d{3})(\d{3})/,"$1 $2 $3$4")} or send an enquiry. Our team will recommend the most appropriate next step.</p>
+        <h2>Ready to improve herd performance?</h2>
+        <p>Tell us what your farm needs. We will recommend the next step.</p>
       </div>
       <a href="contact.html" class="btn btn-gold">Contact Us Today</a>
-    </div>
-  </div>
-</section>
-
-<section class="section alt">
-  <div class="container">
-    <div class="section-head centered">
-      <span class="pill-badge">Get in touch</span>
-      <h2>How to reach us</h2>
-      <p>Choose the most convenient channel. Your enquiry goes directly to the Prodaco Services team.</p>
-    </div>
-    <div class="channel-grid">
-      <div class="channel">
-        <div class="ico">${svgCall}</div>
-        <h4>Call us</h4>
-        <p>Discuss service scope, farm assessment requirements or booking availability.</p>
-        <div class="big">${PHONE_PRIMARY.replace(/(\+\d{3})(\d{3})(\d{3})(\d{3})/,"$1 $2 $3$4")}</div>
-        <a class="btn btn-gold" href="tel:${PHONE_PRIMARY}">Call now</a>
-      </div>
-      <div class="channel">
-        <div class="ico">${svgChat}</div>
-        <h4>WhatsApp</h4>
-        <p>Send a brief description of the enterprise and attach relevant farm photos or records.</p>
-        <div class="big">${PHONE_PRIMARY.replace(/(\+\d{3})(\d{3})(\d{3})(\d{3})/,"$1 $2 $3$4")}</div>
-        <a class="btn btn-wa" href="https://wa.me/${WA_NUMBER}">Chat on WhatsApp</a>
-      </div>
-      <div class="channel">
-        <div class="ico">${svgArrow}</div>
-        <h4>Email us</h4>
-        <p>Send documents, plans, or detailed questions.</p>
-        <div class="big" style="font-size:1rem;">${EMAIL}</div>
-        <a class="btn btn-green" href="mailto:${EMAIL}">Email now</a>
-      </div>
-      <div class="channel">
-        <div class="ico">${svgSchool}</div>
-        <h4>Request a farm visit</h4>
-        <p>Submit the enquiry form to arrange an initial discussion and, where appropriate, an on-farm assessment.</p>
-        <div class="big" style="font-size:1rem;">Fill the form</div>
-        <a class="btn btn-green" href="contact.html#enquiry">Open form</a>
-      </div>
     </div>
   </div>
 </section>`;
@@ -461,7 +364,7 @@ function contactBody() {
   <div class="container">
     <span class="pill-badge">Get in touch</span>
     <h1 style="margin-top:14px">Contact Us</h1>
-    <p>Contact us to request a farm assessment, confirm service availability or obtain a detailed quotation for dairy and beef cattle services.</p>
+    <p>Request a farm assessment, service booking or quotation.</p>
   </div>
 </section>
 
@@ -470,36 +373,36 @@ function contactBody() {
     <div class="section-head centered">
       <span class="pill-badge">Get started</span>
       <h2>How to reach us</h2>
-      <p>Choose the most convenient channel. Your enquiry goes directly to the Prodaco Services team.</p>
+      <p>Choose the channel that suits you.</p>
     </div>
     <div class="channel-grid">
       <div class="channel">
-        <div class="ico">📞</div>
+        <div class="ico">${SVG_CALL}</div>
         <h4>Call us</h4>
-        <p>Discuss your production objectives, required service and preferred timing.</p>
+        <p>Speak directly with our team.</p>
         <div class="big">${PHONE_PRIMARY.replace(/(\+\d{3})(\d{3})(\d{3})(\d{3})/,"$1 $2 $3$4")}</div>
-        <a class="btn btn-gold" href="tel:${PHONE_PRIMARY}">Call now</a>
+        <a class="btn btn-gold" href="tel:${PHONE_PRIMARY}">${SVG_CALL} Call now</a>
       </div>
       <div class="channel">
-        <div class="ico">💬</div>
+        <div class="ico">${SVG_WHATSAPP}</div>
         <h4>WhatsApp</h4>
-        <p>Send a concise farm description and attach relevant photos, feed information or records.</p>
+        <p>Send farm details, photos or records.</p>
         <div class="big">${PHONE_PRIMARY.replace(/(\+\d{3})(\d{3})(\d{3})(\d{3})/,"$1 $2 $3$4")}</div>
-        <a class="btn btn-wa" href="https://wa.me/${WA_NUMBER}?text=Hello%20Prodaco%2C%20I%27d%20like%20to%20ask%20about%20your%20services.">Chat on WhatsApp</a>
+        <a class="btn btn-wa" href="https://wa.me/${WA_NUMBER}?text=Hello%20Prodaco%2C%20I%27d%20like%20to%20ask%20about%20your%20services.">${SVG_WHATSAPP} WhatsApp</a>
       </div>
       <div class="channel">
-        <div class="ico">✉️</div>
+        <div class="ico">${SVG_EMAIL}</div>
         <h4>Email</h4>
-        <p>Send documents, plans, or detailed questions.</p>
+        <p>Send documents or detailed questions.</p>
         <div class="big" style="font-size:1rem;">${EMAIL}</div>
-        <a class="btn btn-green" href="mailto:${EMAIL}">Email us</a>
+        <a class="btn btn-green" href="mailto:${EMAIL}">${SVG_EMAIL} Email us</a>
       </div>
       <div class="channel">
-        <div class="ico">🚜</div>
+        <div class="ico">${SVG_FORM}</div>
         <h4>Request a farm visit</h4>
-        <p>Use the form below to request an initial consultation and, where appropriate, an on-farm technical assessment.</p>
-        <div class="big" style="font-size:1rem;">Fill the form ↓</div>
-        <a class="btn btn-outline" style="border-color:var(--green-800); color:var(--green-800);" href="#enquiry">Go to form</a>
+        <p>Request an on-farm assessment.</p>
+        <div class="big" style="font-size:1rem;">Enquiry form</div>
+        <a class="btn btn-outline" style="border-color:var(--green-800); color:var(--green-800);" href="#enquiry">${SVG_FORM} Open form</a>
       </div>
     </div>
   </div>
@@ -509,8 +412,8 @@ function contactBody() {
   <div class="container split">
     <div>
       <div class="section-head">
-        <h2>Request a technical consultation and quotation</h2>
-        <p>Provide the key details of your dairy or beef enterprise. We will respond with the recommended service scope, information requirements and pricing.</p>
+        <h2>Request a consultation</h2>
+        <p>Share the basics. We will confirm the service scope and price.</p>
       </div>
       <form class="form-grid" id="contactForm" novalidate>
         <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px" aria-hidden="true">
@@ -550,7 +453,7 @@ function contactBody() {
           <textarea id="message" name="message" rows="5" placeholder="Dairy or beef, herd size, what you want to improve, and any timelines..." required></textarea>
         </div>
         <div>
-          <button type="submit" class="btn btn-green">Send Enquiry</button>
+          <button type="submit" class="btn btn-green">${SVG_FORM} Send enquiry</button>
         </div>
         <div id="formMsg" class="form-msg" role="status" aria-live="polite"></div>
       </form>
@@ -558,11 +461,11 @@ function contactBody() {
     <div>
       <div class="card">
         <h3>Planning a seasonal service?</h3>
-        <p>Silage harvesting and dry-season feed supply are scheduled in advance. Early booking helps secure suitable harvest timing, delivery dates and service capacity.</p>
+        <p>Book harvesting and dry-season feed supply early to secure suitable dates.</p>
       </div>
       <div class="card" style="margin-top:20px">
         <h3>Working with cooperatives &amp; NGOs</h3>
-        <p>We design Farmer Field Schools, training-of-trainers programmes and structured farm-improvement assignments for producer organisations and development partners.</p>
+        <p>We provide group training, trainer development and farm-improvement programmes.</p>
       </div>
     </div>
   </div>
@@ -572,23 +475,23 @@ function contactBody() {
 function blogBody() {
   const articles = [
     { tag: "Feeds",    img: PHOTO.blogSilage, title: "Protecting silage quality through the dry season",
-      excerpt: "Five control points that influence fermentation quality, aerobic stability, dry-matter recovery and livestock performance.",
+      excerpt: "Five checks for better fermentation, storage and feeding results.",
       meta: "Coming soon" },
     { tag: "Calves",   img: PHOTO.blogCalf,   title: "A practical 90-day calf-rearing protocol",
-      excerpt: "Colostrum management, milk feeding, starter intake, health monitoring and weaning criteria for dairy replacements and beef calves.",
+      excerpt: "Colostrum, feeding, health monitoring and weaning made practical.",
       meta: "Coming soon" },
     { tag: "Housing",  img: PHOTO.blogShade,  title: "Dairy housing decisions that protect cow comfort",
-      excerpt: "Practical considerations for stall dimensions, ventilation, drainage, hygiene and safe cattle movement.",
+      excerpt: "Key checks for stalls, ventilation, drainage and cattle movement.",
       meta: "Coming soon" },
     { tag: "Beef",     img: PHOTO.blogBeef,   title: "Beef finishing: setting weight, time and feed-cost targets",
-      excerpt: "How to monitor average daily gain, feed cost per kilogram gained, days on feed and readiness for market.",
+      excerpt: "Track daily gain, feed cost, finishing time and market readiness.",
       meta: "Coming soon" },
   ];
   return `<section class="page-hero">
   <div class="container">
     <span class="pill-badge">Blog</span>
     <h1 style="margin-top:14px">Practical tips for productive farms</h1>
-    <p>Articles, guides and lessons from our work with farmers across Kenya. Written for the shed, not the classroom.</p>
+    <p>Clear guidance for dairy and beef farmers.</p>
   </div>
 </section>
 
