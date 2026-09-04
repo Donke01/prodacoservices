@@ -65,6 +65,18 @@ const PHOTO = {
   blogBeef:    "https://images.unsplash.com/photo-1504867980221-c62ae681b301?auto=format&fit=crop&w=1200&q=80", // beef herd
 };
 
+const WORK_PHOTOS = [
+  { src: "/images/work/work-01.webp", alt: "Prodaco farmer training session", caption: "Farmer training session" },
+  { src: "/images/work/work-02.webp", alt: "Prodaco team and participants at a milk cooling centre", caption: "Milk cooling centre visit" },
+  { src: "/images/work/work-03.webp", alt: "Practical farmer training in a maize field", caption: "Practical field training" },
+  { src: "/images/work/work-04.webp", alt: "Participants carrying harvested fodder during a demonstration", caption: "Fodder harvesting demonstration" },
+  { src: "/images/work/work-05.webp", alt: "Farmers preparing freshly harvested fodder", caption: "Fodder preparation session" },
+  { src: "/images/work/work-06.webp", alt: "Farmers visiting an established pasture plot", caption: "Pasture establishment visit" },
+  { src: "/images/work/work-07.webp", alt: "Practical chaff-cutter demonstration with farmers", caption: "Chaff-cutter demonstration" },
+  { src: "/images/work/work-08.webp", alt: "Prodaco outdoor farmer training workshop", caption: "Farmer training workshop" },
+  { src: "/images/work/work-09.webp", alt: "Farm team compacting and packing silage", caption: "Silage preparation and packing" },
+];
+
 const PAGES = [
   { file: "index.html",       nav: "home",         custom: "home",
     title: "Dairy and Beef Cattle Nutrition and Farm Services",
@@ -221,6 +233,29 @@ function pageHead(p) {
 
 const pageTail = () => `${fabs}\n${footer}\n<script src="/site.js?v=${V_JS}" defer></script>\n</body>\n</html>\n`;
 
+function workGallery() {
+  const slides = WORK_PHOTOS.map((photo) => `<figure class="work-slide">
+        <img src="${photo.src}" alt="${photo.alt}" width="800" height="600" loading="lazy">
+        <figcaption>${photo.caption}</figcaption>
+      </figure>`).join("");
+
+  return `<section class="work-showcase" aria-labelledby="work-showcase-title">
+  <div class="container">
+    <div class="section-head centered">
+      <span class="pill-badge">Our work</span>
+      <h2 id="work-showcase-title">Prodaco in the field</h2>
+      <p>Practical training, forage production and farm support.</p>
+    </div>
+  </div>
+  <div class="work-slider" role="region" aria-label="Prodaco field activities">
+    <div class="work-track">
+      <div class="work-set">${slides}</div>
+      <div class="work-set" aria-hidden="true">${slides}</div>
+    </div>
+  </div>
+</section>`;
+}
+
 /* -------- page bodies -------- */
 
 function homeBody() {
@@ -331,6 +366,8 @@ function homeBody() {
     </div>
   </div>
 </section>
+
+${workGallery()}
 
 <section class="section alt">
   <div class="container">
