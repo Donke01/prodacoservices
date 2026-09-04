@@ -234,8 +234,8 @@ function pageHead(p) {
 const pageTail = () => `${fabs}\n${footer}\n<script src="/site.js?v=${V_JS}" defer></script>\n</body>\n</html>\n`;
 
 function workGallery() {
-  const slides = WORK_PHOTOS.map((photo) => `<figure class="work-slide">
-        <img src="${photo.src}" alt="${photo.alt}" width="800" height="600" loading="lazy">
+  const slides = WORK_PHOTOS.map((photo, index) => `<figure class="work-slide${index === 0 ? " is-active" : ""}" aria-hidden="${index === 0 ? "false" : "true"}" data-work-slide>
+        <img src="${photo.src}" alt="${photo.alt}" width="1600" height="900" loading="lazy">
         <figcaption>${photo.caption}</figcaption>
       </figure>`).join("");
 
@@ -247,10 +247,12 @@ function workGallery() {
       <p>Practical training, forage production and farm support.</p>
     </div>
   </div>
-  <div class="work-slider" role="region" aria-label="Prodaco field activities">
-    <div class="work-track">
-      <div class="work-set">${slides}</div>
-      <div class="work-set" aria-hidden="true">${slides}</div>
+  <div class="container">
+    <div class="work-slider" role="region" aria-label="Prodaco field activities" aria-roledescription="carousel" data-work-carousel>
+      <div class="work-track">${slides}</div>
+      <button class="work-nav work-prev" type="button" aria-label="Previous photo">&#8592;</button>
+      <button class="work-nav work-next" type="button" aria-label="Next photo">&#8594;</button>
+      <div class="work-dots" aria-label="Choose a photo"></div>
     </div>
   </div>
 </section>`;
