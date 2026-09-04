@@ -22,6 +22,79 @@
     toggle.addEventListener('click', function () { nav.classList.toggle('open'); });
   }
 
+  // Field-work carousel
+  var carousel = document.querySelector('[data-work-carousel]');
+  if (carousel) {
+    var slides = Array.prototype.slice.call(carousel.querySelectorAll('[data-work-slide]'));
+    var dotsWrap = carousel.querySelector('.work-dots');
+    var previous = carousel.querySelector('.work-prev');
+    var next = carousel.querySelector('.work-next');
+    var current = 0;
+    var timer;
+    var touchStartX = 0;
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function showSlide(index) {
+      current = (index + slides.length) % slides.length;
+      slides.forEach(function (slide, slideIndex) {
+        var active = slideIndex === current;
+        slide.classList.toggle('is-active', active);
+        slide.setAttribute('aria-hidden', active ? 'false' : 'true');
+      });
+      Array.prototype.forEach.call(dotsWrap.children, function (dot, dotIndex) {
+        dot.setAttribute('aria-current', dotIndex === current ? 'true' : 'false');
+      });
+    }
+
+    function stopCarousel() {
+      window.clearInterval(timer);
+    }
+
+    function startCarousel() {
+      stopCarousel();
+      if (!reduceMotion) {
+        timer = window.setInterval(function () { showSlide(current + 1); }, 4800);
+      }
+    }
+
+    slides.forEach(function (_, index) {
+      var dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'work-dot';
+      dot.setAttribute('aria-label', 'Show photo ' + (index + 1));
+      dot.addEventListener('click', function () {
+        showSlide(index);
+        startCarousel();
+      });
+      dotsWrap.appendChild(dot);
+    });
+
+    previous.addEventListener('click', function () {
+      showSlide(current - 1);
+      startCarousel();
+    });
+    next.addEventListener('click', function () {
+      showSlide(current + 1);
+      startCarousel();
+    });
+    carousel.addEventListener('mouseenter', stopCarousel);
+    carousel.addEventListener('mouseleave', startCarousel);
+    carousel.addEventListener('focusin', stopCarousel);
+    carousel.addEventListener('focusout', startCarousel);
+    carousel.addEventListener('touchstart', function (event) {
+      touchStartX = event.changedTouches[0].clientX;
+      stopCarousel();
+    }, { passive: true });
+    carousel.addEventListener('touchend', function (event) {
+      var distance = event.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(distance) > 45) showSlide(current + (distance < 0 ? 1 : -1));
+      startCarousel();
+    }, { passive: true });
+
+    showSlide(0);
+    startCarousel();
+  }
+
   // Contact form → POST /api/contact
   var form = document.getElementById('contactForm');
   if (!form) return;
