@@ -131,8 +131,9 @@ img { max-width: 100%; display: block; }
 
 /* Page hero (interior pages) */
 .page-hero { background: #f7f8fa; color: var(--green-900); padding: 52px 0; border-bottom: 1px solid var(--line); }
+.page-hero .container { text-align: center; }
 .page-hero h1 { font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 800; }
-.page-hero p { color: var(--ink-soft); max-width: 65ch; margin-top: 10px; font-size: clamp(1rem, 1.4vw, 1.0625rem); line-height: 1.65; }
+.page-hero p { color: var(--ink-soft); max-width: 65ch; margin: 10px auto 0; font-size: clamp(1rem, 1.4vw, 1.0625rem); line-height: 1.65; }
 .page-hero .eyebrow { color: var(--green-700); font-family: var(--font-display); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; font-size: .75rem; }
 
 /* Buttons */
@@ -302,8 +303,8 @@ img { max-width: 100%; display: block; }
   .nav-toggle { display: block; }
   .site-nav { display: none; width: 100%; }
   .site-nav.open { display: block; }
-  .site-nav ul { flex-direction: column; padding-bottom: 12px; }
-  .site-nav a { padding: 13px 14px; font-size: .9375rem; }
+  .site-nav ul { flex-direction: column; align-items: stretch; padding-bottom: 12px; }
+  .site-nav a { padding: 13px 14px; font-size: .9375rem; text-align: center; }
 }
 @media (max-width: 900px) {
   .hero { padding: 56px 0 64px; }
@@ -313,8 +314,28 @@ img { max-width: 100%; display: block; }
 @media (max-width: 620px) {
   .section { padding: 44px 0; }
   .hero { padding: 48px 0 56px; }
-  .hero-cta .btn, .cta-band .btn { display: block; width: 100%; text-align: center; }
-  .hero-cta { flex-direction: column; gap: 12px; max-width: 340px; }
+  .contact-strip .container { justify-content: center; }
+  .cs-socials { justify-content: center; }
+  .section-head { margin-left: auto; margin-right: auto; text-align: center; }
+  .card { align-items: center; text-align: center; }
+  .card .icon { margin-left: auto; margin-right: auto; }
+  .card ul, .card ol { width: 100%; text-align: left; }
+  .benefit { text-align: center; }
+  .benefit .b-ico { margin-left: auto; margin-right: auto; }
+  .service-body { text-align: center; }
+  .service-body ul { text-align: left; }
+  .step { text-align: center; }
+  .step .n { margin-left: auto; margin-right: auto; }
+  .prose { margin-left: auto; margin-right: auto; }
+  .prose > h2, .prose > h3, .prose > p, .prose > .callout { text-align: center; }
+  .check-list { text-align: left; }
+  .article-card .body { align-items: center; text-align: center; }
+  .form-grid { margin-left: auto; margin-right: auto; text-align: left; }
+  .form-grid button { width: 100%; justify-content: center; }
+  .footer-grid { text-align: center; }
+  .socials { justify-content: center; }
+  .hero-cta .btn, .cta-band .btn { display: flex; width: 100%; justify-content: center; text-align: center; }
+  .hero-cta { flex-direction: column; gap: 12px; max-width: 340px; margin-left: auto; margin-right: auto; }
   .cta-band { padding: 32px 22px; text-align: center; justify-content: center; }
   .cta-band > div { width: 100%; }
   .cta-band .btn { margin-top: 6px; }
