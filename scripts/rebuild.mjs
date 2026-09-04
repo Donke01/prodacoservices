@@ -45,11 +45,11 @@ const IMPACT = [
 ];
 
 // Photos matched to each service description. Cattle photos only where the
-// service is about cattle (nutrition, comfort/shelter). Training and consultancy
-// use African-context farm photos of people. Verified 2026-08-24.
+// service is about cattle (nutrition, comfort/shelter). Training uses a real
+// Prodaco field-training photo supplied by the client.
 const PHOTO = {
-  // Training: African farmer carrying a bundle of fodder, showing practical farm work
-  training:    "https://images.unsplash.com/photo-1741940365425-1b9a575d373e?auto=format&fit=crop&w=1200&q=80",
+  // Training: Prodaco-led practical training in a fodder field
+  training:    "/images/services/farm-training.webp",
   // Consultancy: single cow portrait, retained from the live site
   consultancy: "https://images.unsplash.com/photo-1583364428520-fa6c5013c0c3?auto=format&fit=crop&w=1200&q=80",
   // Cattle nutrition: cows actively eating hay to represent feeds and silage
@@ -324,7 +324,7 @@ function homeBody() {
         <p>On-farm programmes for owners, managers, workers, farmer groups and extension teams.</p>
         <a class="btn btn-green" href="training.html">See training options</a>
       </div>
-      <div class="service-media"><img src="${PHOTO.training}" alt="Farmer carrying harvested fodder during practical cattle-feeding work" width="1200" height="800" loading="lazy"></div>
+      <div class="service-media"><img src="${PHOTO.training}" alt="Prodaco trainer leading a practical field session with farmers" width="1600" height="720" loading="lazy"></div>
     </div>
 
     <div class="service-row">
