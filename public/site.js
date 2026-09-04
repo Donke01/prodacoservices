@@ -1,5 +1,20 @@
 // Prodaco — shared site JS
 (function () {
+  // Return refreshed internal pages to the homepage.
+  var navigationEntry = window.performance && typeof window.performance.getEntriesByType === 'function'
+    ? window.performance.getEntriesByType('navigation')[0]
+    : null;
+  var legacyNavigation = window.performance && window.performance.navigation;
+  var isReload = navigationEntry
+    ? navigationEntry.type === 'reload'
+    : legacyNavigation && legacyNavigation.type === 1;
+  var isHome = window.location.pathname === '/' || window.location.pathname === '/index.html';
+
+  if (isReload && !isHome) {
+    window.location.replace('/');
+    return;
+  }
+
   // Mobile nav toggle
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.querySelector('.site-nav');
