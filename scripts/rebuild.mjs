@@ -464,7 +464,7 @@ function contactBody() {
         <p>Book harvesting and dry-season feed supply early to secure suitable dates.</p>
       </div>
       <div class="card" style="margin-top:20px">
-        <h3>Working with cooperatives &amp; NGOs</h3>
+        <h3>Group training</h3>
         <p>We provide group training, trainer development and farm-improvement programmes.</p>
       </div>
     </div>
