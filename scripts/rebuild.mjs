@@ -50,14 +50,14 @@ const IMPACT = [
 const PHOTO = {
   // Training: Prodaco-led practical training in a fodder field
   training:    "/images/services/farm-training.webp",
-  // Consultancy: single cow portrait, retained from the live site
-  consultancy: "https://images.unsplash.com/photo-1583364428520-fa6c5013c0c3?auto=format&fit=crop&w=1200&q=80",
-  // Cattle nutrition: cows actively eating hay to represent feeds and silage
-  nutrition:   "https://images.unsplash.com/photo-1504868433093-25555d9c0796?auto=format&fit=crop&w=1200&q=80",
+  // Consultancy: Prodaco-led farm consultation with a farmer group
+  consultancy: "/images/services/farm-consultancy.webp",
+  // Cattle nutrition: practical silage preparation and compaction
+  nutrition:   "/images/services/cattle-nutrition.webp",
   // Cow Comfort / Shelter: cows inside a barn
   comfort:     "https://images.unsplash.com/photo-1636998980792-63f27ddea4e3?auto=format&fit=crop&w=1200&q=80",
-  // On-farm services: herd of cattle in the field
-  activities:  "https://images.unsplash.com/photo-1504867980221-c62ae681b301?auto=format&fit=crop&w=1200&q=80",
+  // On-farm services: practical feed-processing demonstration
+  activities:  "/images/services/on-farm-services.webp",
   // Blog thumbnails
   blogSilage:  "https://images.unsplash.com/photo-1504867841338-3da010c6152c?auto=format&fit=crop&w=1200&q=80", // cattle eating grass
   blogCalf:    "https://images.unsplash.com/photo-1504868531014-6f6787aa186f?auto=format&fit=crop&w=1200&q=80", // young cows / calves
@@ -334,7 +334,7 @@ function homeBody() {
         <p>Benchmarking, operating systems and improvement plans based on production and cost records.</p>
         <a class="btn btn-green" href="consultancy.html">Consultancy services</a>
       </div>
-      <div class="service-media"><img src="${PHOTO.consultancy}" alt="Dairy cow being assessed as part of cattle farm consultancy" width="1200" height="800" loading="lazy"></div>
+      <div class="service-media"><img src="${PHOTO.consultancy}" alt="Prodaco consultant addressing farmers during a group advisory session" width="1600" height="900" loading="lazy"></div>
     </div>
 
     <div class="service-row">
@@ -344,7 +344,7 @@ function homeBody() {
         <p>Silage, hay and concentrates for milk production, young stock, breeding, growth and finishing.</p>
         <a class="btn btn-green" href="nutrition.html">Our products</a>
       </div>
-      <div class="service-media"><img src="${PHOTO.nutrition}" alt="Cattle eating forage as part of a balanced feeding programme" width="1200" height="800" loading="lazy"></div>
+      <div class="service-media"><img src="${PHOTO.nutrition}" alt="Farm team compacting silage during practical cattle nutrition work" width="1600" height="900" loading="lazy"></div>
     </div>
 
     <div class="service-row">
@@ -364,7 +364,7 @@ function homeBody() {
         <p>Silage harvesting, ration formulation, herd-health planning and performance monitoring.</p>
         <a class="btn btn-green" href="activities.html">Farm services</a>
       </div>
-      <div class="service-media"><img src="${PHOTO.activities}" alt="Cattle herd supported through on-farm production services" width="1200" height="800" loading="lazy"></div>
+      <div class="service-media"><img src="${PHOTO.activities}" alt="Farmers observing a practical feed-processing demonstration" width="1600" height="900" loading="lazy"></div>
     </div>
   </div>
 </section>
